@@ -896,3 +896,17 @@ html {
 .hot {
   display: inline-block;
 }
+
+footer {
+  background-color: rgb(114, 111, 111);
+}
+.page-footer {
+  background-image: url(.././img/story_inventor/inventor2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  color: #fff;
+}
+.text-uppercase {
+  color: rgb(186, 197, 165);
+}
