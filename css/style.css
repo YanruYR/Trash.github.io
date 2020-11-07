@@ -2,7 +2,7 @@ body {
   font-family: "Noto Sans TC", sans-serif;
 }
 header {
-  background-image: url(/img/index/a.jpg);
+  background-image: url(../img/index/a.jpg);
   background-repeat: none;
   background-position: center center;
   -webkit-background-size: cover;
