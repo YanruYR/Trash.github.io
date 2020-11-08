@@ -897,26 +897,13 @@ html {
   display: inline-block;
 }
 
-footer {
-  background: linear-gradient(#fff, rgb(105, 102, 102), #000); /* FF3.6-15 */
-  background: linear-gradient(
-    #fff,
-    rgb(105, 102, 102),
-    #000
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    #fff,
-    rgb(105, 102, 102),
-    #000
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
 .footer {
   /* background-image: url(.././img/story_inventor/inventor2.png); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top right;
   color: #fff;
-  background-color: rgb(173, 172, 172);
+  background-color: rgb(10, 10, 10);
 }
 
 .text-uppercase {
