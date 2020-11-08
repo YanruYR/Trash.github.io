@@ -898,9 +898,19 @@ html {
 }
 
 footer {
-  background-color: rgb(173, 172, 172);
+  background: linear-gradient(#fff, rgb(105, 102, 102), #000); /* FF3.6-15 */
+  background: linear-gradient(
+    #fff,
+    rgb(105, 102, 102),
+    #000
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    #fff,
+    rgb(105, 102, 102),
+    #000
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
-.page-footer {
+.footer {
   /* background-image: url(.././img/story_inventor/inventor2.png); */
   background-repeat: no-repeat;
   background-size: cover;
@@ -908,18 +918,23 @@ footer {
   color: #fff;
   background-color: rgb(173, 172, 172);
 }
-.page-footer a:link,
-a:visited {
-  color: #ffff;
-  text-decoration: none;
-}
-.page-footer a:hover {
-  color: #a38b58;
-  text-decoration: none;
-}
+
 .text-uppercase {
   color: #a38b58;
 }
 .mx-auto {
   text-align: initial;
+}
+.Info {
+  color: #fff;
+}
+.Info a {
+  color: #fff;
+}
+.Info a:link {
+  text-decoration: none;
+}
+.Info a:hover {
+  color: #a38b58;
+  transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
