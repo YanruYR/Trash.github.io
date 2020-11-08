@@ -3,7 +3,7 @@ body {
 }
 /* ------header Start------ */
 header {
-  background-image: url(.././img/index/a.jpg);
+  background-image: url(.././img/index/b.png);
   background-repeat: none;
   background-position: center center;
   -webkit-background-size: cover;
@@ -901,12 +901,25 @@ footer {
   background-color: rgb(173, 172, 172);
 }
 .page-footer {
-  background-image: url(.././img/story_inventor/inventor2.png);
+  /* background-image: url(.././img/story_inventor/inventor2.png); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top right;
   color: #fff;
+  background-color: rgb(173, 172, 172);
+}
+.page-footer a:link,
+a:visited {
+  color: #ffff;
+  text-decoration: none;
+}
+.page-footer a:hover {
+  color: #a38b58;
+  text-decoration: none;
 }
 .text-uppercase {
   color: #a38b58;
+}
+.mx-auto {
+  text-align: initial;
 }
