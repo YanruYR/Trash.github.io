@@ -19,7 +19,6 @@ $(document).ready(function () {
     lazyload: true,
     stagepadding: true,
     smartspeed: 450,
-
     responsive: {
       0: {
         items: 1,
@@ -38,7 +37,7 @@ $(document).ready(function () {
         loop: true,
       },
       1200: {
-        items: 5,
+        items: 4,
         dots: false,
       },
     },
