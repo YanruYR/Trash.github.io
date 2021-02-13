@@ -95,7 +95,7 @@
 }
 #gtco-logo {
     min-width: 30%;
-    background-image: url(/images/logo_white.png);
+    background-image: url('./../images/logo_white.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 95%;
