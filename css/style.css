@@ -384,7 +384,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 0;
   left: 0;
   right: 0;
-  background: rgb(29 43 83 / 71%)
+  background: #00000078
 }
 .gtco-cover > .gtco-container {
   position: relative;
@@ -1511,7 +1511,7 @@ form label {
   width: 33.33%;
   float: left;
   padding: 30px;
-  background: #17B794;
+  background: #333;
   position: relative;
   text-align: center;
 }
@@ -1539,7 +1539,7 @@ form label {
   height: 90px;
   margin: 0 auto 10px auto;
   position: relative;
-  background: #15a989;
+  background: #777777;
   top: -3em;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1567,7 +1567,7 @@ form label {
   -webkit-box-shadow: 0px 0 30px 10px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0 30px 10px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0 30px 10px rgba(0, 0, 0, 0.25);
-  background: #15a585;
+  background: #333;
 }
 @media screen and (max-width: 768px) {
   #gtco-features-3 .feature.feature-2 {
@@ -1577,7 +1577,7 @@ form label {
   }
 }
 #gtco-features-3 .feature.feature-2 .icon {
-  background: #13977a;
+  background: #777777;
 }
 #gtco-features-3 .feature.feature-2 .feature-inner {
   top: -3em;
@@ -1592,7 +1592,7 @@ form label {
   position: absolute;
   top: -50px;
   content: "";
-  background: #15a585;
+  background: #333;
   height: 50px;
   width: 100%;
   left: 0;
@@ -1606,7 +1606,7 @@ form label {
   position: absolute;
   bottom: -30px;
   content: "";
-  background: #15a585;
+  background: #333;
   height: 30px;
   width: 100%;
   left: 0;
@@ -1621,10 +1621,10 @@ form label {
 }
 #gtco-features-3 .feature.feature-3 {
   z-index: 7;
-  background: #129377;
+  background: #333;
 }
 #gtco-features-3 .feature.feature-3 .icon {
-  background: #118a6f;
+  background: #777777;
 }
 
 .gtco-flex {
