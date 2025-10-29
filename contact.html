@@ -131,8 +131,8 @@
 
 			<p>
 			<div class="container about text-center">
-				E-mail: yanlu.8147@gmail.com<br />
-				Address：Shop 2.64 Armadale Shopping City (Next to Target)
+				<p>E-mail: yanlu.8147@gmail.com<br />
+					Address：Shop 2.64 Armadale Shopping City (Next to Target)</p>
 
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6755.733819825403!2d116.0127684754019!3d-32.15389003229043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32936aeee79701%3A0x7196cddb86402c8f!2s206%20Jull%20St%2C%20Armadale%20WA%206112!5e0!3m2!1szh-TW!2sau!4v1761234564158!5m2!1szh-TW!2sau%22%20width=%22600%22%20height=%22450%22%20style=%22border:0;%22%20allowfullscreen=%22%22%20loading=%22lazy%22%20referrerpolicy=%22no-referrer-when-downgrade"
@@ -150,7 +150,9 @@
 				<div class="row row-pb-md">
 					<div class="col-md-12 animate-box">
 						<h1>Get in Touch</h1>
-						<form action="#">
+						<p>Please use the form below if you’d like to ask a question or booking. We'll send you message
+							shortly.</p>
+						<form action="#" id="contactForm">
 							<div class="row form-group">
 								<div class="col-md-12">
 									<label class="sr-only" for="name">Name</label>
@@ -168,7 +170,7 @@
 
 							<div class="row form-group">
 								<div class="col-md-12">
-									<label class="sr-only" for="subject">Subject</label>
+									<label class="sr-only" for="phone">Phone</label>
 									<input type="text" id="Phone" class="form-control" placeholder="Phone">
 								</div>
 							</div>
@@ -185,6 +187,7 @@
 							</div>
 
 						</form>
+						<p id="responseMessage"></p>
 					</div>
 					<!-- <div class="col-md-5 col-md-push-1 animate-box">
 
@@ -273,7 +276,38 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<script>
 
+
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbyIzLgjKQ82D6nQWLlFaVONKZ4Q0Ee31wtMWoQSZ4YSFyMFSFNfRGGFmB6JAsRZgoB4/exec';
+
+		document.getElementById('contactForm').addEventListener('submit', e => {
+			e.preventDefault();
+
+			const formData = {
+				name: e.target.name.value,
+				email: e.target.email.value,
+				email: e.target.phone.value,
+				message: e.target.message.value
+			};
+
+			fetch(scriptURL, {
+				method: 'POST',
+				mode: 'no-cors',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(formData)
+			}).then(() => {
+				document.getElementById('responseMessage').innerText = 'Message sent successfully!';
+				e.target.reset();
+			}).catch(err => {
+				document.getElementById('responseMessage').innerText = 'Error sending message.';
+				console.error(err);
+			});
+		});
+
+
+	</script>
 </body>
+
 
 </html>

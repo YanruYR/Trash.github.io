@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5, h6, figure {
 /* 小螢幕調整 */
 @media (max-width: 768px) {
   .gtco-nav #gtco-logo {
-    max-width: 200px;
+    max-width: 100%;
     font-size: 18px;
   }
 }
