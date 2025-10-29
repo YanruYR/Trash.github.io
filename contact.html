@@ -283,13 +283,17 @@
 
 		document.getElementById('contactForm').addEventListener('submit', e => {
 			e.preventDefault();
-
+			const form = e.target;
 			const formData = {
 				name: e.target.name.value,
 				email: e.target.email.value,
 				phone: e.target.phone.value,
 				message: e.target.message.value
 			};
+			const msg = document.getelementById('responseMessage');
+			msg.innerText="Message send ! Thank you for contacting us.";
+			msg.style.color="green";
+			form.reset()
 
 			fetch(scriptURL, {
 				method: 'POST',
