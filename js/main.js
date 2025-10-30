@@ -1,4 +1,22 @@
-;(function () {
+// 模組化載入 nav 並初始化 dropdown hover
+async function loadNav() {
+  const navContainer = document.getElementById("nav");
+  const nav = await fetch("./nav.html");
+  const navhtml = await nav.text();
+  navContainer.innerHTML = navhtml;
+
+  const footerContainer = document.getElementById("footer");
+  const footer = await fetch("./footer.html");
+  const footerhtml = await footer.text();
+  footerContainer.innerHTML = footerhtml;
+
+  // 初始化 dropdown hover
+  initDropdownHover();
+  reInitNavScripts();
+}
+
+function initDropdownHover() {
+  ;(function () {
 	
 	'use strict';
 
@@ -330,3 +348,20 @@
 
 
 }());
+}
+function reInitNavScripts() {
+  // 這裡假設 main.js 已經在 <script> 載入
+  if (typeof mobileMenuOutsideClick === "function") {
+    mobileMenuOutsideClick();
+    offcanvasMenu();
+    burgerMenu();
+    dropdown();
+  } else {
+    console.warn("main.js 尚未載入或函式未定義");
+  }
+}
+
+// 啟動載入
+loadNav();
+
+
