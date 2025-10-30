@@ -12,7 +12,7 @@ async function loadNav() {
 
   // 初始化 dropdown hover
   initDropdownHover();
-  reInitNavScripts();
+
 }
 
 function initDropdownHover() {
@@ -348,17 +348,6 @@ function initDropdownHover() {
 
 
 }());
-}
-function reInitNavScripts() {
-  // 這裡假設 main.js 已經在 <script> 載入
-  if (typeof mobileMenuOutsideClick === "function") {
-    mobileMenuOutsideClick();
-    offcanvasMenu();
-    burgerMenu();
-    dropdown();
-  } else {
-    console.warn("main.js 尚未載入或函式未定義");
-  }
 }
 
 // 啟動載入
