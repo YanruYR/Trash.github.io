@@ -418,46 +418,10 @@
 
 
 
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-md-6 col-12">
-                        <div class="footer_blog_section">
-                            <img src="images/logo.png" alt="#" style="width: 198px;" />
-                            <p style="margin-top: 5px; font-size: 1rem;">新樂康是一家 以“創新 快樂
-                                健康”為宗旨的年輕有活力的公司，公司主要從事進出口保健食品原料、有機食品原料、化妝品原料及代工OEM、ODM等服務。<br><br>公司秉持著對客戶之誠信理念，提供最好品質的要求，在我們全方位的服務下，提供客戶完整的需求，給予技術研發及市場行銷等專業化服務，與客戶共同成長。<br><br>我們結合了國內外的先進的研發技術及經驗豐富專業研發人員與營養師，隨時為你提供最佳的服務品質，無論是原料、新產品研發、配方設計至產品代工，只要是您的需要即為我們的工作目標。我們也將繼續發揚此信念，不斷研發創新，以提供更好服務。
-                            </p>
-                        </div>
-                    </div>
+        <!-- Footer -->
 
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="item">
-                            <h4 class="text-uppercase">聯絡資訊</h4>
-                            <p>E-mail: admin@bio-true.com.tw</p>
-                            <p><strong>台灣總公司：新樂康有限公司 </strong></p>
-                            <p><img src="" alt="" />地址：台中市太平區太順路329號 </p>
-                            <p> 電話：+886-4-23960263</p>
-                            <p><img src="" alt="" />傳真：+886-4-23960273</p>
-                            <p><strong>中國辦事處：杭州欣生喜生物技術有限公司</strong> </p>
-                            <p>地址：杭州市余杭区南苑街道西子国际金座2楼606室</p>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="item">
-                            <h4 class="text-uppercase">台灣總公司</h4>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.3522463772515!2d120.71673751430882!3d24.159376284389367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691806bcc70fb5%3A0x4ec644dd5e0dc4d1!2zNDA25Y-w5Lit5biC5aSq5bmz5Y2A5aSq6aCG6LevMzI56Jmf!5e0!3m2!1szh-TW!2stw!4v1612751287467!5m2!1szh-TW!2stw"
-                                width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright text-center">
-                <p>Copyright 2021 Design by <a href="#">新樂康有限公司</a></p>
-            </div>
-        </footer>
+        <div id="footer"></div>
+        <!-- END Footer -->
     </div>
 
     <div class="gototop js-top">
@@ -481,7 +445,11 @@
     <script src="js/magnific-popup-options.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
-
+    <script>
+        fetch("/footer.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("footer").innerHTML = html);
+    </script>
 </body>
 
 </html>
