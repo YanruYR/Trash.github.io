@@ -1456,6 +1456,7 @@ form label {
   -o-transition: 0.5s;
   transition: 0.5s;
   padding: 8px 30px;
+  margin-top: 20px;
 }
 
 .btn.btn-md {
