@@ -1,34 +1,34 @@
 .thumbnail img:hover {
-    opacity: 0.7;
-    transition: all 0.3s ease-in-out 0s;
-    transform: scale(1.2, 1.2);
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out 0s;
+  transform: scale(1.2, 1.2);
 }
 
 .product_box {
-    min-height: 270px;
-    height: 183px;
-    display: grid;
-    text-align: center;
-    overflow: hidden;
+  min-height: 270px;
+  height: 183px;
+  display: grid;
+  text-align: center;
+  overflow: hidden;
 }
 
 .product_box img {
-    width: 100%;
-    height: 200px;
-    transform: scale(1, 1);
-    transition: all 2s ease-out;
+  width: 100%;
+  height: 200px;
+  transform: scale(1, 1);
+  transition: all 2s ease-out;
 }
 
 .icon-marquee {
-    position: relative;
+  position: relative;
 
-    top: 1px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 
 
@@ -38,116 +38,118 @@
 
 
 .searchBox {
-    position: absolute;
-    /* top: 50%; */
-    left: 50%;
-    /* transform: translate(-50%,50%); */
-    /* background: #2f3640; */
-    /* height: 40px; */
-    border-radius: 40px;
-    /* padding: 10px; */
+  position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  /* transform: translate(-50%,50%); */
+  /* background: #2f3640; */
+  /* height: 40px; */
+  border-radius: 40px;
+  /* padding: 10px; */
 
 }
 
 .searchBox:hover>.searchInput {
-    width: 360px;
-    padding: 0 6px;
+  width: 360px;
+  padding: 0 6px;
 }
 
 .searchBox:hover>.searchButton {
-    /* background: white;
+  /* background: white;
   color : #2f3640; */
 }
 
 .searchButton {
-    color: white;
-    float: right;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #2f3640;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
+  color: white;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
 }
 
 .searchInput {
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    padding: 0;
-    color: white;
-    font-size: 16px;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 0px;
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
 
 }
 
 @media screen and (max-width: 620px) {
-    .searchBox:hover>.searchInput {
-        width: 80%;
-        padding: 0 6px;
+  .searchBox:hover>.searchInput {
+    width: 80%;
+    padding: 0 6px;
 
-    }
+  }
 }
+
 #gtco-logo {
-    min-width: 50%;
-    background-image: url('./../images/logo_white.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 95%;
-    height: 67px;
-    display: flex;
-    margin: 6px;
+  min-width: 50%;
+  background-image: url('./../images/logo_white.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 95%;
+  height: 67px;
+  display: flex;
+  margin: 6px;
 
 }
 
 /* footer */
 /* footer */
 footer {
-    display: block;
-    overflow: hidden;
-    background-color: #000000;
-    padding: 40px 0 0;
-    border-radius: 20px 20px 0 0;
-  }
-  
-  footer a,
-  footer p {
-    color: white;
-  }
-  
-  footer .item {
-    margin: 20px 0 20px 0;
-  }
-  
-  footer .item h4 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: 700;
-    color: white;
-  }
-  
-  footer .item p {
-    position: relative;
-    /* padding-left: 25px; */
-    font-size: 15px;
-    margin: 0 0 10px 0;
-    color: white;
-  }
-  
-  footer .copyright {
-    padding: 10px 0 1px;
-    border-top: solid #bea643 1px;
-    background: #000001;
-    /* margin-top: 30px; */
-  }
-  /* end of footer */
+  display: block;
+  overflow: hidden;
+  background-color: #000000;
+  padding: 40px 0 0;
+  border-radius: 20px 20px 0 0;
+}
 
-  /* Started of Partnership */
+footer a,
+footer p {
+  color: white;
+}
+
+footer .item {
+  margin: 20px 0 20px 0;
+}
+
+footer .item h4 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+footer .item p {
+  position: relative;
+  /* padding-left: 25px; */
+  font-size: 15px;
+  margin: 0 0 10px 0;
+  color: white;
+}
+
+footer .copyright {
+  padding: 10px 0 1px;
+  border-top: solid #bea643 1px;
+  background: #000001;
+  /* margin-top: 30px; */
+}
+
+/* end of footer */
+
+/* Started of Partnership */
 .Partner_card {
   /* 設定父親定位點 */
   position: relative;
@@ -191,37 +193,299 @@ footer {
 }
 
 .image-container {
-    column-count: 4;
-    column-gap: 10px;
-    padding: 10px;
-  }
+  column-count: 4;
+  column-gap: 10px;
+  padding: 10px;
+}
 
-  .image-container img {
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    background: #e0e0e0; /* 預留背景讓懶加載時不會跳動 */
-    transition: opacity 0.5s ease;
-    opacity: 0;
-  }
+.image-container img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #e0e0e0;
+  /* 預留背景讓懶加載時不會跳動 */
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
 
-  .image-container img.loaded {
-    opacity: 1;
-  }
+.image-container img.loaded {
+  opacity: 1;
+}
 
-  @media (max-width: 800px) {
-    .image-container { column-count: 2; }
+@media (max-width: 800px) {
+  .image-container {
+    column-count: 2;
   }
+}
 
-  @media (max-width: 500px) {
-    .image-container { column-count: 1; }
+@media (max-width: 500px) {
+  .image-container {
+    column-count: 1;
   }
+}
 
-  .loading {
-    text-align: center;
-    padding: 15px;
-    font-size: 16px;
-    color: #666;
-  }
+.loading {
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  color: #666;
+}
 
 /* End of Partnership */
+
+/* 💠 主體區塊 */
+.tech-section {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at 30% 30%, #14122c, #060715 90%);
+  z-index: 10;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding-bottom: 3%;
+}
+
+
+
+.tech-section img {
+  max-width: 90%;
+  /* ✅ 響應式縮放 */
+  height: auto;
+  /* ✅ 保持比例 */
+  margin-top: 20px;
+  /* ✅ 確保貼齊上方 */
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .tech-section img {
+    width: 100%;
+    /* ✅ 手機全寬 */
+    max-width: none;
+    height: auto;
+
+    /* ✅ 居中 */
+  }
+}
+
+
+/* 🔹 背景能量流 */
+.tech-grid {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #00ffff, #7a00ff, #8a2be2);
+  background-size: 400% 400%;
+  animation: energyFlow 10s ease-in-out infinite;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+@keyframes energyFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ⚡ 科技線條層 */
+.tech-lines {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(138, 43, 226, 0.07) 0px, transparent 2px, transparent 80px),
+    repeating-linear-gradient(0deg, rgba(0, 255, 255, 0.05) 0px, transparent 2px, transparent 60px);
+  animation: moveLines 20s linear infinite;
+  transform: rotate(10deg);
+  z-index: 1;
+
+}
+
+@keyframes moveLines {
+  from {
+    transform: translateY(0) rotate(10deg);
+  }
+
+  to {
+    transform: translateY(-120px) rotate(10deg);
+  }
+}
+
+/* 💥 脈衝電流閃爍層 */
+.energy-pulse {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.25), transparent 60%);
+  mix-blend-mode: screen;
+  animation: pulseEnergy 3s infinite ease-in-out;
+  z-index: 2;
+}
+
+@keyframes pulseEnergy {
+
+  0%,
+  100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.35;
+    transform: scale(1.05);
+  }
+}
+
+/* ⚡ 電弧閃爍線條 */
+.electric-arc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: rgba(0, 255, 255, 0.6);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.8));
+  animation: arcFlash 4s infinite ease-in-out;
+  z-index: 3;
+}
+
+.electric-arc path {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 0;
+  animation: dashShift 1.5s infinite linear;
+}
+
+@keyframes dashShift {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+@keyframes arcFlash {
+
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  60% {
+    opacity: 0.3;
+  }
+}
+
+/* 🌌 粒子 */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 200, 255, 0.9), rgba(150, 0, 255, 0.1) 60%);
+  box-shadow: 0 0 25px rgba(0, 150, 255, 0.8), 0 0 60px rgba(150, 0, 255, 0.4);
+  animation: float 10s linear infinite;
+  filter: blur(1px);
+  mix-blend-mode: screen;
+  z-index: 4;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100%) scale(0.8);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(-10%) scale(1.3);
+    opacity: 1;
+  }
+}
+
+/* 📍 內容 */
+.tech-content {
+  position: relative;
+  z-index: 6;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeIn 1.5s ease forwards 1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tech-content h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  background: linear-gradient(90deg, #00ffff, #8a2be2);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 30px #8a2be2, 0 0 60px #00ffff;
+}
+
+.tech-content p {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: rgba(230, 230, 255, 0.9);
+  text-shadow: 0 0 15px rgba(150, 0, 255, 0.4);
+}
+
+/* 🔮 霓虹按鈕 */
+.tech-btn {
+  margin-top: 2rem;
+  padding: 0.9rem 2.4rem;
+  font-size: 1.1rem;
+  border: 2px solid #7a00ff;
+  background: transparent;
+  color: #a0f0ff;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.7);
+  animation: pulseBtn 2s infinite ease-in-out;
+  transition: 0.3s;
+}
+
+@keyframes pulseBtn {
+
+  0%,
+  100% {
+    box-shadow: 0 0 25px #7a00ff70, 0 0 60px #00ffff70;
+  }
+
+  50% {
+    box-shadow: 0 0 40px #8a2be2, 0 0 80px #00ffff;
+  }
+}
+
+.tech-btn:hover {
+  background: linear-gradient(90deg, #00ffff, #8a2be2);
+  color: #0a0a1a;
+  box-shadow: 0 0 50px #00ffff, 0 0 100px #8a2be2;
+}
+
+/* 📱 響應式 */
+@media (max-width: 600px) {
+  .tech-content {
+    padding: 1.5rem;
+  }
+}
