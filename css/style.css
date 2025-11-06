@@ -32,7 +32,7 @@ body {
 
 .offcanvas #page {
   overflow: hidden;
-  position: absolute;
+  position: relative;
 }
 
 .offcanvas #page:after {
@@ -1189,7 +1189,7 @@ form label {
   position: absolute;
   z-index: 1901;
   width: 270px;
-  background: black;
+  background: #17181e;
   top: 0;
   right: 0;
   top: 0;
@@ -1205,6 +1205,8 @@ form label {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+ 
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -1223,6 +1225,7 @@ form label {
 
 #gtco-offcanvas a {
   color: rgba(255, 255, 255, 0.5);
+  
 }
 
 #gtco-offcanvas a:hover {
