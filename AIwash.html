@@ -74,7 +74,7 @@
         <!-- The modal -->
 
         <header id="gtco-header" class="gtco-cover gtco-cover-xs" role="banner"
-            style="background-image:url(images/indexPoster4.png);">
+            style="">
             <div class="overlay"></div>
             <div class="gtco-container">
                 <div class="row">
@@ -245,7 +245,7 @@
 
         faqContainer.innerHTML = faqContainer.innerHTML = faqData
             .map((item, i) => `
-    <div class="panel panel-default col-md-6 ">
+    <div class="panel panel-default col-md-4 ">
         <button class="btn btn-primary btn btn-primary faq-btn"
                 data-toggle="collapse"
                 data-parent="#faq-accordion"
@@ -253,7 +253,7 @@
             ${item.q}
         </button>
         <div id="faq${i}" class="collapse">
-            <div class="card card-body">
+            <div class="card card-body ">
                 ${item.a}
             </div>
         </div>
