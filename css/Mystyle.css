@@ -110,12 +110,14 @@
 /* footer */
 footer {
   padding: 15px 0 5px;
-  border-top: 1px solid rgba(138, 43, 226, 0.6); /* 紫色光線 */
+  border-top: 1px solid rgba(138, 43, 226, 0.6);
+  /* 紫色光線 */
   background: linear-gradient(180deg, #0a0a1a 0%, #111133 60%, #000010 100%);
   position: relative;
   overflow: hidden;
   color: #cfcfff;
   text-align: center;
+  margin-top: 20px;
 }
 
 
@@ -446,7 +448,7 @@ footer .copyright {
 
 .tech-content p {
   margin-top: 1rem;
-  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-size: 16px;
   color: rgba(230, 230, 255, 0.9);
   text-shadow: 0 0 15px rgba(150, 0, 255, 0.4);
 }
@@ -491,4 +493,168 @@ footer .copyright {
   .tech-content {
     padding: 1.5rem;
   }
+}
+
+
+/* End of FAQ */
+.faq {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 0;
+}
+
+/* 隱藏 checkbox */
+.faq-item input {
+  display: none;
+}
+
+/* 問題樣式 */
+.faq-question {
+  display: block;
+  font-size: 1.1rem;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 0;
+  color: #fff;
+}
+
+/* plus / minus 符號 */
+.faq-question::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+/* 展開後變成 "-" */
+.faq-item input:checked+.faq-question::after {
+  content: "-";
+}
+
+/* 答案內容 */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.35s ease;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* 展開動畫 */
+.faq-item input:checked~.faq-answer {
+  max-height: 300px;
+}
+
+/* End of FAQ */
+/* FAQ 修改版 */
+
+
+/* FAQ 外層依然置中 + 靠左 */
+#faq {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* 每一題 FAQ 的外層 */
+#faq .col-md-12 {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+/* 科技風亮線：左側霓虹光條 */
+#faq .col-md-12::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(180deg, #0ff, #00f, #0ff);
+  border-radius: 4px;
+  opacity: 0.8;
+  box-shadow: 0 0 12px #0ff;
+  transition: 0.3s ease;
+}
+
+/* Hover 亮線變亮 */
+#faq .col-md-12:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 20px #0ff, 0 0 35px #00f;
+}
+
+/* FAQ 按鈕：科技感藍光 */
+#faq button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: rgba(20, 30, 60, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  color: #0ff;
+  padding: 14px 16px;
+  font-size: 2rem;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Glow 光暈 */
+#faq button:hover {
+  box-shadow: 0 0 15px #0ff, 0 0 25px #0088ff inset;
+  border-color: #0ff;
+}
+
+/* 粒子光（按鈕背景） */
+#faq button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.25), transparent 60%);
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+/* Hover 時粒子光亮起來 */
+#faq button:hover::after {
+  opacity: 0.45;
+  transform: scale(1.2);
+}
+
+/* 內容卡片 */
+#faq .card {
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  background: rgba(15, 25, 45, 0.7);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2) inset;
+}
+
+/* FAQ 答案文字 */
+#faq .card-body {
+  color: #b8eaff;
+  line-height: 1.7;
+  padding: 16px 20px;
+}
+
+.btn.faq-btn {
+  width: 100%;
+  white-space: normal !important;
+  word-break: break-word;
+  text-align: left;
+  padding: 12px 18px;
+  min-height: 80px;
+  border-radius: 40px;
 }
