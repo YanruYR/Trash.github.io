@@ -120,13 +120,14 @@
     z-index: 2; */
     /* ✅ 在背景之上 */
     min-width: 50%;
-    background-image: url('./../images/logo_white.png');
+    /* background-image: url('./../images/logo_white.png'); */
     background-size: contain;
     background-repeat: no-repeat;
     width: 95%;
     height: 67px;
     display: flex;
     margin: 6px;
+    filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.4));
   }
 
   .logo:hover {
@@ -293,7 +294,7 @@
 <nav class="gtco-nav" role="navigation">
   <div class="gtco-container">
     <div class="nav-bg"></div>
-    <div class="logo"></div>
+    <div class="logo"><img src="./images/logo_white.png" alt=""></div>
     <div class="col-xs-12 text-right menu-1">
       <ul>
         <li><a href="index.html">HOME</a></li>

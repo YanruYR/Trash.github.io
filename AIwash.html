@@ -133,7 +133,7 @@
                             <ul class="text-left" style="    list-style: none;
     padding-left: 0;
     margin: 0;
-    width: 50%;
+    width: 60%;
     /* position: relative; */
     display: inline-block;">
                                 <li>
@@ -176,7 +176,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <button class="tech-btn"><a href="contact.html" class="">CONTACT US</a></button>
+                        <button class="tech-btn"><a href="contact.html" class="">Interested to be a partner? contact us</a></button>
                     </div>
                 </div>
 
@@ -188,7 +188,7 @@
     <section>
         <div class="gtco-container">
             <div class="row">
-                <div class="panel-group" id="faq-accordion">
+                <div class="panel-group" id="faq-accordion" >
 
 
                 </div>
@@ -233,11 +233,10 @@
             { q: "Is the water temperature stable?", a: "The water temperature is set to a constant 38-39 degrees Celsius in summer and a constant 42 degrees Celsius in winter, so it won't get too hot and scalding. You can also adjust the temperature according to the air temperature." },
             { q: "Does this machine give me a feeling of grasping?", a: "Yes, through an array of water, the pulse method mimics the feeling of grasping and patting, allowing the acupoints on the head to relax and the hair follicles to be fully nourished." },
             { q: "What are the benefits from AI machine?", a: "The combination of bio-light therapy, herbal shampoo and conditioner, and head massage can promote blood circulation in the scalp, providing immediate results. It alleviates scalp itching, dandruff, and oil control issues. Continued use can regulate the scalp's pH balance." },
-            { q: "藥湯洗後頭髮乾澀?", a: "光是用植萃原液洗會有乾澀感，屬於正常狀態，但是機器內設定有自動上護髮精華，如果燙染或毛髮天生毛躁的客人，會建議員工們上護髮素或養髮乳沖洗乾淨即可。" },
-            { q: "中藥配方的成分對老人小孩孕婦有不良影響嗎?", a: "完全沒有，都是對身體有益且非常溫和的成分。" },
-            { q: "按摩椅對老人家會不會不合適?", a: "如果上年紀的老人覺得自身筋骨不耐按摩椅的按摩，可以選擇停止使用按摩椅" },
-            { q: "長期用這個機器人洗頭會不會有影響?", a: "可以改善頭皮環境，修復毛囊，養髮護髮" },
-            { q: "長頭髮會不會卡頭髮?", a: "不會，整台機器裡面是沒有任何零件會產生卡頭髮的結構。完全放心使用" },
+            { q: "Hair will feel dry after washing with Chinese medicine?", a: "It's normal for hair to feel dry after washing with plant extracts. However, the machine is set to automatically apply hair conditioner. If the customer has permed, dyed, or naturally frizzy hair, the staff will recommend that they apply conditioner or hair nourishing lotion and rinse it off." },
+            { q: "does massage chair unsuitable for senior?", a: "If you don't usually like massage chairs, you can choose to stop using them." },
+            { q: "What are the long-term effects of using this machine  to wash your hair?", a: "It can improve the scalp environment, repair hair follicles, and nourish and protect hair." },
+            { q: "does machine get stuck for long hair?", a: "No, there are no parts inside the machine that could trap hair. You can use it with complete peace of mind." },
 
         ];
 
@@ -245,7 +244,7 @@
 
         faqContainer.innerHTML = faqContainer.innerHTML = faqData
             .map((item, i) => `
-    <div class="panel panel-default col-md-4 ">
+    <div class="panel panel-default col-md-4 " style="background-color: #000000;">
         <button class="btn btn-primary btn btn-primary faq-btn"
                 data-toggle="collapse"
                 data-parent="#faq-accordion"
