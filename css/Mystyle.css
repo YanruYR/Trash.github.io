@@ -708,29 +708,28 @@ footer .copyright {
 
 /* ✅ 科技網格線 */
 #gtco-header:before {
-      content: "";
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(rgba(0, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 255, 0.08) 1px, transparent 1px);
-    background-size: 60px 60px;
-    z-index: 1;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* ✅ 粒子光點效果 */
 #gtco-header:after {
   content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    background-image: radial-gradient(#00000061 1px, #000 1px);
-    background-size: 4px 4px;
-    animation: footerParticles 22s 
-linear infinite;
-    opacity: 0.4;
-    z-index: 1;
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background-image: radial-gradient(#ffffff3d 1px, #000 1px);
+  background-size: 4px 4px;
+  animation: footerParticles 22s linear infinite;
+  opacity: 0.4;
+  z-index: 1;
 }
 
 /* ✅ 粒子緩慢漂移動畫 */
@@ -754,4 +753,9 @@ linear infinite;
 /* ✅ 遮罩效果（微透明） */
 #gtco-header .overlay {
   background: rgba(0, 0, 0, 0.4);
+}
+
+.input-error {
+  border-color: #ff3b6b !important;
+  box-shadow: 0 0 10px rgba(255, 60, 100, 0.8);
 }

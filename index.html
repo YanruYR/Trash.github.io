@@ -101,10 +101,11 @@
 										class="btn btn-white btn-lg btn-outline" data-toggle=""
 										data-target="">Interested to be partner ?</a></p>
 								<button class="btn btn-primary animate-box" data-toggle="modal" data-target="#formModal"
-									data-animate-effect="fadeInUp">
-									Get your trail discount 20 people a day only
+									data-animate-effect="fadeInUp"
+									style="height: 150px;background-image: url(./images/machine01.png);background-size: cover;">
+									Get your FREE trial now!
 								</button>
-								
+
 
 
 							</div>
@@ -431,7 +432,7 @@
 
 				<div class="modal-header" style="border-bottom:1px solid cyan;">
 					<button type="button" class="close" data-dismiss="modal" style="color:cyan;">&times;</button>
-					<h4 class="modal-title" style="color:#87f8ff;">Fill Form</h4>
+					<h4 class="modal-title" style="color:#87f8ff;">The first 20 customers will receive discount.</h4>
 				</div>
 
 				<div class="modal-body">
@@ -470,9 +471,13 @@
 
 				</div>
 
+
 			</div>
 		</div>
 	</div>
+
+
+
 
 	<script>
 
@@ -483,6 +488,16 @@
 			e.preventDefault();
 
 			const form = e.target;
+			const loader = document.getElementById("neonLoader");
+
+
+
+			// 基礎驗證（空值）
+			if (!form.name.value.trim()) { form.name.classList.add("input-error"); return; }
+			if (!form.email.value.trim()) { form.email.classList.add("input-error"); return; }
+			if (!form.phone.value.trim()) { form.phone.classList.add("input-error"); return; }
+			if (!form.message.value.trim()) { form.message.classList.add("input-error"); return; }
+
 			const formData = {
 				name: form.name.value,
 				email: form.email.value,
@@ -490,7 +505,7 @@
 				message: form.message.value
 			};
 
-			console.log(formData); // 這邊現在會動
+			loader.style.display = "flex";
 
 			fetch(scriptURL, {
 				method: 'POST',
@@ -499,9 +514,12 @@
 				body: JSON.stringify(formData)
 			})
 				.then(() => {
-					alert("Message sent successfully!");
+					loader.style.display = "none";
+					showSuccessModal();
+					// alert("Message sent successfully!");
 					$('#formModal').modal('hide');
 					form.reset();
+
 				})
 				.catch(err => {
 					alert("Error sending message.");
@@ -512,6 +530,135 @@
 
 
 	</script>
+
+
+
+
+
+
+	<!-- 最下面 -->
+	<div id="successModal" class="neon-success">
+		<div class="box">
+			<h2>Message Sent</h2>
+			<p>Thank you for contacting us.</p>
+			<button onclick="closeSuccessModal()">OK</button>
+		</div>
+	</div>
+
+	<style>
+		.neon-success {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: rgba(0, 0, 20, 0.85);
+			backdrop-filter: blur(5px);
+			z-index: 99999;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.neon-success .box {
+			background: #0a0f1c;
+			border: 2px solid cyan;
+			padding: 25px 30px;
+			width: 260px;
+			text-align: center;
+			box-shadow: 0 0 12px cyan;
+			animation: neonPulse 1.6s infinite alternate;
+		}
+
+		.neon-success h2 {
+			color: cyan;
+			margin-bottom: 10px;
+		}
+
+		.neon-success p {
+			color: #b8fcff;
+			margin-bottom: 20px;
+		}
+
+		.neon-success button {
+			background: transparent;
+			border: 1px solid cyan;
+			color: cyan;
+			padding: 5px 22px;
+			cursor: pointer;
+			transition: 0.3s;
+		}
+
+		.neon-success button:hover {
+			box-shadow: 0 0 10px cyan;
+		}
+
+		@keyframes neonPulse {
+			0% {
+				box-shadow: 0 0 10px cyan;
+			}
+
+			100% {
+				box-shadow: 0 0 30px cyan;
+			}
+		}
+	</style>
+
+	<script>
+		function showSuccessModal() {
+			document.getElementById("successModal").style.display = "flex";
+		}
+
+		function closeSuccessModal() {
+			document.getElementById("successModal").style.display = "none";
+		}
+	</script>
+	<!-- loading -->
+	<div id="neonLoader" style="
+    display:none;
+ position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,20,0.85);
+    backdrop-filter: blur(3px);
+    z-index: 9999;
+    justify-content:center;
+    align-items:center;
+">
+		<div class="loader-circle"></div>
+	</div>
+
+	<style>
+		.loader-circle {
+			width: 90px;
+			height: 90px;
+			border: 4px solid cyan;
+			border-top-color: transparent;
+			border-radius: 50%;
+			animation: spin 1s linear infinite, glow 1.5s ease-in-out infinite;
+		}
+
+		@keyframes spin {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes glow {
+			0% {
+				box-shadow: 0 0 4px cyan;
+			}
+
+			50% {
+				box-shadow: 0 0 14px cyan;
+			}
+
+			100% {
+				box-shadow: 0 0 4px cyan;
+			}
+		}
+	</style>
+
 
 </body>
 
