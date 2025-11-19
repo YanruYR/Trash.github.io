@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cut-You ｜ Perth Hair Salon | AI Hair Wash, Haircut & Scalp Treatment in WA</title>
+    <meta
+      name="description"
+      content="Experience next-level hair care in Perth. Cut-You offers AI hair wash, professional haircuts, deep conditioning, and scalp treatments. Stylish, relaxing, and designed for all hair types—book your session today."
+    />
+
+    <link rel="canonical" href="https://www.cut-you.com/" />
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Cut-You",
+        "image": "https://www.cut-you.com/your-image.jpg",
+        "url": "https://www.cut-you.com/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Perth",
+          "addressRegion": "WA",
+          "addressCountry": "Australia"
+        },
+        "description": "Perth hair salon offering AI hair wash, haircuts, and scalp treatments.",
+        "priceRange": "$$"
+      }
+    </script>
+
+    <!-- Open Graph (Facebook, LINE 分享) -->
+    <meta property="og:title" content="Cut-You ｜ Perth Hair Salon in WA" />
+    <meta
+      property="og:description"
+      content="AI hair wash, haircut, scalp treatment and more. A premium, relaxing hair salon in Perth."
+    />
+    <meta property="og:url" content="https://www.cut-you.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.cut-you.com/your-image.jpg" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cut-You ｜ Perth Hair Salon" />
+    <meta name="twitter:description" content="AI hair wash, haircut, scalp treatments and more in Perth." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>頭皮理療 | Style Salon</title>
+    <!-- 載入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* 導航連結樣式 (與首頁保持一致) */
+      .nav-link {
+        @apply text-gray-700 hover:text-teal-600 transition duration-150 py-5;
+      }
+      /* 更新: '頭皮理療' 頁面的 active 樣式 */
+      .nav-link.active {
+        @apply text-teal-700 font-bold border-b-3 border-teal-600;
+        border-bottom-width: 3px;
+      }
+      .mobile-menu-link {
+        @apply block px-3 py-3 text-base font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-600 rounded-md;
+      }
+      .mobile-menu-link.active {
+        @apply bg-teal-100 text-teal-700;
+      }
+
+      /* 行動裝置菜單切換動畫 */
+      #mobile-menu {
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      }
+
+      /* FAQ 內容區塊的動畫效果 */
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        padding-left: 1.25rem; /* px-5 */
+        padding-right: 1.25rem; /* px-5 */
+        /* 初始狀態沒有 padding-top/bottom */
+      }
+      .accordion-content.open {
+        /* 預設一個足夠大的高度，實際內容會撐開它 */
+        max-height: 500px;
+        padding-top: 1rem; /* pt-4 */
+        padding-bottom: 1rem; /* pb-4 */
+      }
+      .accordion-icon {
+        transition: transform 0.3s ease-in-out;
+      }
+      .accordion-button[aria-expanded='true'] .accordion-icon {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- 響應式 Header 導航欄 (更新 Active Link) -->
+    <div id="header-placeholder"></div>
+    <main>
+      <!-- 頂部標題區域 -->
+      <section class="bg-teal-600 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-5xl font-extrabold text-white mb-4">Automated Scalp Therapy</h1>
+          <p class="text-xl text-teal-200">
+            Address scalp concerns at the root and restore the natural health and vitality of your hair and scalp.
+          </p>
+        </div>
+      </section>
+
+      <!-- 第一欄: 理療六大功能 (圖片左, 文字右) -->
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row items-center gap-10 lg:gap-16">
+            <!-- 左側：圖片 -->
+            <div
+              class="md:w-1/2 rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-500 order-1"
+            >
+              <img src="./images/machine01.png" alt="[頭皮理療儀器圖片]" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- 右側：六大功能介紹 -->
+            <div class="md:w-1/2 space-y-8 order-2">
+              <span class="text-sm font-semibold text-teal-600 uppercase tracking-wider">The Core</span>
+              <h2 class="text-4xl font-bold text-gray-800">Six Core Functions for Complete Scalp Health</h2>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Our professional scalp therapists use the most advanced equipment and natural products to deeply purify
+                and nourish your scalp—effectively addressing a wide range of common scalp concerns.
+              </p>
+
+              <!-- 六大功能網格 -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+                <!-- 功能 1: 深度淨化 -->
+                <div class="flex items-start">
+                  <div class="p-2 bg-teal-100 rounded-full text-teal-600 mr-3 mt-1 flex-shrink-0">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.143M21 21v-7a3 3 0 00-3-3h-2"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800">Deep Purification</h4>
+                    <p class="text-sm text-gray-500">
+                      Removes excess sebum, buildup, and chemical residues trapped in the hair follicles.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 功能 2: 舒緩敏感 -->
+                <div class="flex items-start">
+                  <div class="p-2 bg-teal-100 rounded-full text-teal-600 mr-3 mt-1 flex-shrink-0">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.242a2.24 2.24 0 010 3.168l-3.2 3.168a2.24 2.24 0 01-3.168 0L9 12M5 12h.01M19 12h.01M15 16h.01"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800">Soothing for Sensitivity</h4>
+                    <p class="text-sm text-gray-500">
+                      Calms redness, irritation, and itching while restoring the scalp’s natural protective barrier.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 功能 3: 油脂平衡 -->
+                <div class="flex items-start">
+                  <div class="p-2 bg-teal-100 rounded-full text-teal-600 mr-3 mt-1 flex-shrink-0">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 19V6.353m0 0a2 2 0 10-4 0v12m4-12a2 2 0 114 0v12m-4-12h4m-4 0H5m4 0a2 2 0 114 0m4 0a2 2 0 114 0m-4-12v12m0 0V6.353m0 0a2 2 0 10-4 0v12m4-12a2 2 0 114 0v12m-4-12h4m-4 0H5m4 0a2 2 0 114 0"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800">Oil Control & Balance</h4>
+                    <p class="text-sm text-gray-500">
+                      Regulates sebaceous gland activity to eliminate greasy roots and maintain long-lasting freshness.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 功能 4: 強健髮根 -->
+                <div class="flex items-start">
+                  <div class="p-2 bg-teal-100 rounded-full text-teal-600 mr-3 mt-1 flex-shrink-0">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800">Strengthening the Hair Roots</h4>
+                    <p class="text-sm text-gray-500">
+                      Infuses growth factors to fortify the roots and reduce abnormal hair loss.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 功能 5: 循環促進 -->
+                <div class="flex items-start">
+                  <div class="p-2 bg-teal-100 rounded-full text-teal-600 mr-3 mt-1 flex-shrink-0">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800">Enhanced Circulation</h4>
+                    <p class="text-sm text-gray-500">
+                      Uses bio-red light and targeted device stimulation to boost blood circulation in the scalp.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 功能 6: 壓力釋放 -->
+                <div class="flex items-start">
+                  <div class="p-2 bg-teal-100 rounded-full text-teal-600 mr-3 mt-1 flex-shrink-0">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800">Stress Relief</h4>
+                    <p class="text-sm text-gray-500">
+                      Our enhanced massage chair helps your entire body relax and release tension.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 第三欄: 5 張卡片 (3 + 2 佈局) -->
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">Five features</h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 第一排 3 張卡片 -->
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 space-y-3"
+            >
+              <div
+                class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-xl mb-3"
+              >
+                1
+              </div>
+              <h4 class="text-xl font-bold text-gray-800">
+                Automatically Adjustable Water Column for Deep Cleansing Without Hair Loss
+              </h4>
+              <p class="text-gray-500">
+                The water column penetrates deep into pores for a thorough clean, gentle wash without damaging hair. It
+                cleanses effectively and leaves hair feeling soft and healthy.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 space-y-3"
+            >
+              <div
+                class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-xl mb-3"
+              >
+                2
+              </div>
+              <h4 class="text-xl font-bold text-gray-800">Multifunctional</h4>
+              <p class="text-gray-500">
+                Multi-mode intelligent shampooing allows for adjustable rhythm and intensity to meet various scalp
+                needs.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 space-y-3"
+            >
+              <div
+                class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-xl mb-3"
+              >
+                3
+              </div>
+              <h4 class="text-xl font-bold text-gray-800">U-shaped Water Column for 360-Degree Washing</h4>
+              <p class="text-gray-500">
+                The surrounding water column provides complete 360-degree coverage, leaving hair smooth, tangle-free,
+                and silky.
+              </p>
+            </div>
+
+            <!-- 第二排 2 張卡片 (使用 flex + grid 實現居中) -->
+            <!-- sm:col-span-2 ensures that on tablet size (sm), these two cards still get good horizontal space. -->
+            <div class="sm:col-span-2 lg:col-span-3 flex justify-center mt-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:w-2/3 xl:w-1/2">
+                <div
+                  class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 space-y-3"
+                >
+                  <div
+                    class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-xl mb-3"
+                  >
+                    4
+                  </div>
+                  <h4 class="text-xl font-bold text-gray-800">Hands-Free for Lazy People</h4>
+                  <p class="text-gray-500">
+                    One-button start for fully automatic shampooing and massage, completely freeing your hands. A choice
+                    for both lazy people and professional salons.
+                  </p>
+                </div>
+
+                <div
+                  class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 space-y-3"
+                >
+                  <div
+                    class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-xl mb-3"
+                  >
+                    5
+                  </div>
+                  <h4 class="text-xl font-bold text-gray-800">Bio-Red Light Stimulates Hair Follicle Growth</h4>
+                  <p class="text-gray-500">
+                    Infrared rays deeply stimulate scalp hair follicles, promoting blood circulation and hair growth,
+                    resulting in naturally healthier and thicker hair.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 第四欄: 4 張卡片 (一排 4 張佈局) -->
+      <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">Product Advantages</h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- 4 張卡片 -->
+            <div
+              class="flex flex-col items-center text-center bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
+            >
+              <div class="text-teal-600 mb-4">
+                <!--  -->
+                <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 10h4.764a2 2 0 011.857 2.153l-2.548 9.548A2 2 0 0117.214 22H6.786a2 2 0 01-1.857-2.148l2.548-9.548A2 2 0 019.236 10H14zm-4 0v4m0 0l4 4m-4-4l-4 4"
+                  />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Reduce Labor Costs</h4>
+              <p class="text-gray-500 text-sm">
+                With AI-powered fully automated service machines, businesses can reduce their reliance on shampooing
+                staff and significantly lower operational expenses.
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col items-center text-center bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
+            >
+              <div class="text-teal-600 mb-4">
+                <!--  -->
+                <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.33v5.5m0 0l-4 4m4-4l4 4"
+                  />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Increase Service Efficiency</h4>
+              <p class="text-gray-500 text-sm">
+                A fully automated workflow shortens service time and increases the number of customers a store can serve
+                each day.
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col items-center text-center bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
+            >
+              <div class="text-teal-600 mb-4">
+                <!--  -->
+                <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                  />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Zero Technical Barriers</h4>
+              <p class="text-gray-500 text-sm">
+                The equipment is simple and intuitive to operate, requiring no professional skills—making it ideal for
+                all types of businesses and new entrepreneurs.
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col items-center text-center bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
+            >
+              <div class="text-teal-600 mb-4">
+                <!--  -->
+                <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                  />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Innovative Customer Experience</h4>
+              <p class="text-gray-500 text-sm">
+                By integrating AI technology with traditional services, the system delivers a fresh, elevated experience
+                that enhances overall customer satisfaction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 第二欄: FAQ (互斥下拉式選單) -->
+      <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">常見問題 (FAQ)</h2>
+
+          <!-- FAQ 容器: 這是 JS 內容注入點 -->
+          <div id="faq-accordion" class="space-y-4">
+            <!-- 內容將由 JavaScript 動態生成 -->
+            <div class="text-center text-gray-500 p-8" id="faq-loading-indicator">載入中...</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 頁腳 (Footer) 區塊 (保持不變) -->
+    <div id="footer-placeholder"></div>
+
+    <script src="./main.js"></script>
+
+    <script>
+      // ---------------------------------------------
+      // FAQ 數據 (將所有問答整理到此處)
+      // ---------------------------------------------
+      const faqData = [
+        {
+          question: 'What is head therapy?',
+          answer:
+            'Scalp therapy is a treatment focused on the scalp and hair roots. Through massage, herbal treatments, and red light therapy, it promotes blood circulation in the scalp, relieves scalp stress, and improves hair follicle health, thus achieving hair care and relaxation effects. Scalp therapy not only improves scalp health but also effectively reduces dandruff, controls oil production, soothes itchy scalp, and even helps relieve stress and anxiety.',
+        },
+        {
+          question: 'Question: What are the specific benefits of scalp treatments for the scalp?',
+          answer:
+            "Scalp treatments promote blood circulation in the scalp, activate hair follicles, and improve the scalp environment, thereby preventing hair loss, controlling oil production, reducing dandruff, and regulating the scalp's pH balance. Scalp treatments can also provide personalized care for oily, dry, or sensitive scalps, contributing to healthy hair.",
+        },
+        {
+          question: 'Can scalp treatments improve hair loss?',
+          answer:
+            'Scalp massage stimulates blood circulation in the scalp, enhancing nutrient supply to hair follicles and thus promoting hair growth. For hair loss caused by poor blood circulation, scalp massage can help repair hair follicles and alleviate symptoms. The effects are even more pronounced when combined with hair care products containing nourishing ingredients.',
+        },
+        {
+          question: 'Will I feel a lot of pain when using a head massage?',
+          answer:
+            'The massage intensity and techniques used in head therapy can be adjusted according to individual needs. Generally, the water pressure, red light, and massage techniques used in head therapy are gentle and should not cause discomfort. If you experience any discomfort, you can inform the technician at any time to adjust the intensity or stop certain procedures. Our treatment process is very comfortable and relaxing. It mainly includes gentle cleansing, soothing massage, and nutrient infusion steps; many customers feel extremely relaxed and even fall asleep during the process.',
+        },
+        {
+          question: 'Who are suitable candidates for head therapy?',
+          answer:
+            'Head therapy is suitable for anyone who wants to improve scalp health and maintain hair, and is especially effective for the following groups: people with scalp problems such as hair loss, dandruff, excessive oil secretion or dryness; people who are often in stressful environments and are prone to scalp tightness; and people who want to promote blood circulation in the head and relieve stress.',
+        },
+        {
+          question: 'How often should I get a head massage?',
+          answer:
+            'The frequency of scalp treatments can be adjusted according to individual needs. Generally, for people with scalp problems, it is recommended to have a scalp treatment once a week, which can effectively improve scalp health and hair quality. For customers with normal scalps or those who want to relax, 1-2 scalp treatments per month are sufficient.',
+        },
+        {
+          question: 'Will a scalp treatment affect dyed or permed hair?',
+          answer:
+            'Hair treatments are safe for dyed and permed hair, especially those using herbal ingredients, which do not cause chemical damage. In fact, hair treatments can nourish dyed and permed hair, promoting healthy hair recovery. For dyed and permed hair, it is recommended to choose nourishing hair serums or conditioners for best results.',
+        },
+
+        {
+          question: 'What is the role of red light therapy in head therapy?',
+          answer:
+            'Red light therapy is a non-invasive phototherapy technique that penetrates the scalp, promoting cell metabolism, improving blood circulation, and helping to repair damaged hair follicles. Red light helps reduce scalp inflammation, relieve itching, and promote healthy hair growth. This makes red light therapy an important component of scalp treatments.',
+        },
+        {
+          question: 'CUT-YOU What are the differences in the products used?',
+          answer:
+            'We insist on using natural and organic scalp care products that are free of irritating chemicals, gentle yet effective, ensuring that no secondary damage to the scalp is caused during the treatment.',
+        },
+      ]
+      // const faqData = [
+      //   {
+      //     question: '什麼是頭療？',
+      //     answer:
+      //       '頭療是一種專注於頭皮和髮根的護理方式，通過按摩、草本護理、紅光療法等手段，促進頭部的血液循環，舒緩頭皮壓力，改善毛囊健康，從而達到護髮和放鬆的效果。頭療不僅能改善頭皮健康，還能有效減少頭皮屑、控油、舒緩頭癢，甚至幫助緩解壓力和焦慮。',
+      //   },
+      //   {
+      //     question: '頭療對頭皮有什麼具體的好處？',
+      //     answer:
+      //       '頭療能促進頭部血液循環，激活毛囊，改善頭皮環境，從而預防掉髮、控油、減少頭皮屑，並調節頭皮的PH值。頭療還能針對油性、乾性或敏感性頭皮提供個性化護理，有助於達到健康的髮質。',
+      //   },
+      //   {
+      //     question: '頭療能改善掉髮問題嗎？',
+      //     answer:
+      //       '頭療能夠刺激頭皮血液循環，增強毛囊的營養供應，從而促進毛髮的生長。對於由於血液循環不良引起的掉髮問題，頭療能夠幫助修復毛囊，緩解掉髮症狀。若搭配使用含有養髮成分的護理產品，效果更為顯著。',
+      //   },
+      //   {
+      //     question: '使用頭療會不會感覺很痛？',
+      //     answer:
+      //       '頭療的按摩力度和手法可以根據個人需求調整。一般情況下，頭療使用的水壓、紅光及按摩手法是溫和的，應該不會感到不適。如果有任何不舒服的感覺，可以隨時告知技術人員調整力度或停止某些操作。我們的理療過程非常舒適和放鬆。主要包含溫和的清潔、舒緩按摩和營養導入步驟，許多顧客會在過程中感到極度的放鬆甚至入睡。',
+      //   },
+      //   {
+      //     question: '頭療適合哪些人群？',
+      //     answer:
+      //       '頭療適合所有想要改善頭皮健康、保養頭髮的人群，尤其對以下人群效果顯著：有掉髮、頭皮屑、油脂分泌過多或乾燥等頭皮問題的人；經常處於壓力大的環境中，容易造成頭皮緊繃的人；以及希望促進頭部血液循環、放鬆壓力的人。',
+      //   },
+      //   {
+      //     question: '我應該多久做一次頭療？',
+      //     answer:
+      //       '頭療的頻率可以根據個人需求調整。通常，對於有頭皮問題的人，建議每週進行一次頭療，這樣能夠有效改善頭皮健康和髮質。對於正常頭皮或想要放鬆的顧客，則可以每月進行1-2次頭療。',
+      //   },
+      //   {
+      //     question: '頭療會對染燙過的頭髮有影響嗎？',
+      //     answer:
+      //       '頭療對染燙過的頭髮是安全的，尤其是使用草本植物成分的護理產品，對毛髮沒有化學傷害。事實上，頭療能夠為染燙受損的頭髮提供滋養，促進毛髮恢復健康。對於染燙後的髮質，建議選擇滋養型的護髮精華或護髮乳，達到最佳效果。',
+      //   },
+
+      //   {
+      //     question: '紅光療法在頭療中有什麼作用？',
+      //     answer:
+      //       '紅光療法是一種非侵入性的光療技術，它能穿透頭皮，促進細胞新陳代謝，改善血液循環，並有助於修復受損的毛囊。紅光有助於減少頭皮的炎症，緩解頭癢，並促進毛髮健康生長。這使得紅光療法成為頭療中的一個重要組成部分。',
+      //   },
+      //   {
+      //     question: 'CUT-YOU 使用的產品有何不同？',
+      //     answer:
+      //       '我們堅持使用天然有機頭皮護理產品，不含刺激性化學物質，溫和且高效，確保在理療過程中不會對頭皮造成二次傷害。',
+      //   },
+      // ]
+      // ---------------------------------------------
+      // FAQ 互斥下拉功能 (Accordion JS)
+      // ---------------------------------------------
+
+      // 封裝展開邏輯
+      function openItem(button, content) {
+        button.setAttribute('aria-expanded', 'true')
+        content.classList.add('open')
+        // 讓圓角看起來更自然，移除底部圓角
+        button.classList.remove('rounded-xl')
+        button.classList.add('rounded-t-xl')
+      }
+
+      // 封裝收合邏輯
+      function closeItem(button, content) {
+        button.setAttribute('aria-expanded', 'false')
+        content.classList.remove('open')
+        // 恢復底部圓角
+        button.classList.add('rounded-xl')
+        button.classList.remove('rounded-t-xl')
+      }
+
+      // 設置所有 FAQ 項目的事件監聽器
+      function setupAccordionListeners() {
+        const accordionContainer = document.getElementById('faq-accordion')
+        // 使用 querySelectorAll 獲取所有由 JS 生成的 FAQ 項目
+        const faqItems = accordionContainer.querySelectorAll('[data-faq-item]')
+
+        faqItems.forEach((item) => {
+          const button = item.querySelector('.accordion-button')
+          const content = item.querySelector('.accordion-content')
+
+          button.addEventListener('click', () => {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true'
+
+            // 1. 如果當前點擊的項目已經展開，則收合它
+            if (isExpanded) {
+              closeItem(button, content)
+              return
+            }
+
+            // 2. 否則，先收合所有其他項目 (互斥功能)
+            faqItems.forEach((otherItem) => {
+              const otherButton = otherItem.querySelector('.accordion-button')
+              const otherContent = otherItem.querySelector('.accordion-content')
+              // 檢查其他項目是否展開
+              if (otherButton !== button && otherButton.getAttribute('aria-expanded') === 'true') {
+                closeItem(otherButton, otherContent)
+              }
+            })
+
+            // 3. 展開當前點擊的項目
+            openItem(button, content)
+          })
+        })
+      }
+
+      // ---------------------------------------------
+      // 動態生成 FAQ HTML 結構
+      // ---------------------------------------------
+      function renderFaqs() {
+        const container = document.getElementById('faq-accordion')
+        // 移除載入指示器
+        const loadingIndicator = document.getElementById('faq-loading-indicator')
+        if (loadingIndicator) {
+          loadingIndicator.remove()
+        }
+
+        let htmlContent = ''
+
+        faqData.forEach((item, index) => {
+          // 為每個 FAQ 項目構建 HTML 模板
+          htmlContent += `
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-200" data-faq-item>
+                        <button class="accordion-button w-full flex justify-between items-center p-5 text-lg font-semibold text-left text-gray-800 hover:bg-teal-50 rounded-xl focus:outline-none" aria-expanded="false">
+                            <span>${item.question}</span>
+                            <svg class="accordion-icon w-6 h-6 text-teal-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="accordion-content text-gray-600">
+                            <p>${item.answer}</p>
+                        </div>
+                    </div>
+                `
+        })
+
+        // 將生成的內容插入到容器中
+        container.innerHTML = htmlContent
+
+        // 設置事件監聽器 (必須在元素插入 DOM 後調用)
+        setupAccordionListeners()
+      }
+
+      // ---------------------------------------------
+      // 頁面初始化
+      // ---------------------------------------------
+      renderFaqs()
+    </script>
+  </body>
+</html>

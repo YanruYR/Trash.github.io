@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cut-You ｜ Perth Hair Salon | AI Hair Wash, Haircut & Scalp Treatment in WA</title>
+    <meta
+      name="description"
+      content="Experience next-level hair care in Perth. Cut-You offers AI hair wash, professional haircuts, deep conditioning, and scalp treatments. Stylish, relaxing, and designed for all hair types—book your session today."
+    />
+
+    <link rel="canonical" href="https://www.cut-you.com/" />
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Cut-You",
+        "image": "https://www.cut-you.com/your-image.jpg",
+        "url": "https://www.cut-you.com/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Perth",
+          "addressRegion": "WA",
+          "addressCountry": "Australia"
+        },
+        "description": "Perth hair salon offering AI hair wash, haircuts, and scalp treatments.",
+        "priceRange": "$$"
+      }
+    </script>
+
+    <!-- Open Graph (Facebook, LINE 分享) -->
+    <meta property="og:title" content="Cut-You ｜ Perth Hair Salon in WA" />
+    <meta
+      property="og:description"
+      content="AI hair wash, haircut, scalp treatment and more. A premium, relaxing hair salon in Perth."
+    />
+    <meta property="og:url" content="https://www.cut-you.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.cut-you.com/your-image.jpg" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cut-You ｜ Perth Hair Salon" />
+    <meta name="twitter:description" content="AI hair wash, haircut, scalp treatments and more in Perth." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>非滿版響應式輪播圖與導航欄</title>
+    <!-- 載入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* 確保輪播區域隱藏超出範圍的內容 */
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .slide {
+        flex: 0 0 100%; /* 每個滑塊佔據 100% 寬度 */
+        min-width: 100%;
+        height: auto;
+        overflow: hidden;
+      }
+      .dot {
+        transition: background-color 0.3s;
+      }
+      .dot.active {
+        background-color: #059669; /* teal-600: 配合 header 主色調 */
+      }
+      /* 自定義 active 導航連結的樣式，使用 Tailwind class 處理 */
+      /* py-5 用於確保在 h-20 的 header 中垂直居中 */
+      .nav-link {
+        @apply text-gray-700 hover:text-teal-600 transition duration-150 py-5;
+      }
+      .nav-link.active {
+        @apply text-teal-700 font-bold border-b-3 border-teal-600;
+        border-bottom-width: 3px; /* 稍微加粗底部線 */
+      }
+      .mobile-menu-link {
+        @apply block px-3 py-3 text-base font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-600 rounded-md;
+      }
+      .mobile-menu-link.active {
+        @apply bg-teal-100 text-teal-700;
+      }
+
+      /* 為了確保 max-h-screen 動畫效果，我們需要手動設定一些過渡屬性 */
+      #mobile-menu {
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      }
+      .serv-svg {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- 響應式 Header 導航欄 -->
+    <div id="header-wrapper" class="origin-top w-full">
+      <div id="header-placeholder"></div>
+    </div>
+    <!-- 頂部標題區域 -->
+    <section class="bg-teal-600 pt-16 pb-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl font-extrabold text-white mb-4">PORTFOLIO</h1>
+        <p class="text-xl text-teal-200">Trust us, and become a better style of yourself.</p>
+      </div>
+    </section>
+
+    <div class="gtco-container">
+        <div class="row">
+          <div class="filter-buttons animate-box">
+            <button class="active animate-box" data-type="men">Men's</button>
+            <button data-type="ladie">Ladie's</button>
+            <button data-type="other">Other</button>
+          </div>
+
+          <div class="image-container" id="imageContainer"></div>
+          <div class="loading" id="loading">Loading...</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- 頁腳 (Footer) 區塊 -->
+
+     <script>
+      // 先載入 Header
+      // fetch('/header.html')
+      //   .then((res) => res.text())
+      //   .then((html) => {
+      //     document.getElementById('header-placeholder').innerHTML = html
+
+      //     // Header 插入後再執行 Header 的 JS 初始化
+      //     initHamburgerMenu()
+      //     initHeaderVars()
+      //   })
+
+      // // 再載入 Footer
+      // fetch('/footer.html')
+      //   .then((res) => res.text())
+      //   .then((html) => {
+      //     document.getElementById('footer-placeholder').innerHTML = html
+      //   })
+
+      async function loadNav() {
+        const headerContainer = document.getElementById('header-placeholder')
+        const header = await fetch('./header.html')
+        const headerhtml = await header.text()
+        headerContainer.innerHTML = headerhtml
+
+        const footerContainer = document.getElementById('footer-placeholder')
+        const footer = await fetch('./footer.html')
+        const footerhtml = await footer.text()
+        footerContainer.innerHTML = footerhtml
+
+        initHamburgerMenu()
+        initHeaderVars()
+      }
+      loadNav()
+      // 將 header DOM 綁定拆成一個 function
+      function initHeaderVars() {
+        window.mobileMenuButton = document.getElementById('mobile-menu-button')
+        window.mobileMenu = document.getElementById('mobile-menu')
+        window.menuIcon = document.getElementById('menu-icon')
+        window.closeIcon = document.getElementById('close-icon')
+
+        console.log('Header DOM 綁定完畢')
+      }
+    </script>
+
+   
+
+    <script>
+      // 漢堡選單初始化
+      function initHamburgerMenu() {
+        const btn = document.getElementById('mobile-menu-button')
+        const menu = document.getElementById('mobile-menu')
+        const menuIcon = document.getElementById('menu-icon')
+        const closeIcon = document.getElementById('close-icon')
+
+        if (!btn || !menu) return
+
+        btn.addEventListener('click', () => {
+          const open = menu.classList.contains('max-h-0')
+          menu.classList.toggle('max-h-0', !open)
+          menu.classList.toggle('max-h-96', open)
+          menu.classList.toggle('opacity-0', !open)
+          menu.classList.toggle('opacity-100', open)
+
+          menuIcon.classList.toggle('hidden', open)
+          closeIcon.classList.toggle('hidden', !open)
+        })
+      }
+    </script>
+    <script>
+      const container = document.getElementById('imageContainer')
+      const loading = document.getElementById('loading')
+      const buttons = document.querySelectorAll('.filter-buttons button')
+
+      let currentType = 'men'
+      let page = 1
+      let isLoading = false
+
+      // 設定每類型的總圖片數量
+      const imageData = {
+        men: 100,
+        ladie: 100,
+        other: 100,
+      }
+      const imagesPerPage = 5
+
+      // 懶加載觀察器
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target
+            img.src = img.dataset.src
+            observer.unobserve(img)
+          }
+        })
+      })
+
+      // 主要載入函式
+      function loadImages() {
+        if (isLoading) return
+        isLoading = true
+        loading.style.display = 'block'
+
+        setTimeout(() => {
+          const totalImages = imageData[currentType]
+          const start = (page - 1) * imagesPerPage + 1
+          const end = Math.min(start + imagesPerPage - 1, totalImages)
+
+          for (let i = start; i <= end; i++) {
+            const img = document.createElement('img')
+            img.dataset.src = `portfolio/${currentType}${i}.jpg` // e.g. image/short1.jpg
+            img.onload = () => img.classList.add('loaded')
+            observer.observe(img)
+            container.appendChild(img)
+          }
+
+          page++
+          isLoading = false
+          loading.style.display = 'none'
+
+          if (end >= totalImages) {
+            loading.textContent = '🎉 該分類已全部載入完畢'
+            window.removeEventListener('scroll', handleScroll)
+          }
+        }, 600)
+      }
+
+      function handleScroll() {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 150) {
+          loadImages()
+        }
+      }
+
+      // 切換分類
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          buttons.forEach((b) => b.classList.remove('active'))
+          btn.classList.add('active')
+          currentType = btn.dataset.type
+          page = 1
+          container.innerHTML = ''
+          loading.textContent = '載入中...'
+          window.addEventListener('scroll', handleScroll)
+          loadImages()
+        })
+      })
+
+      // 初始載入
+      window.addEventListener('scroll', handleScroll)
+      loadImages()
+    </script>
+    <style>
+      h1 {
+        text-align: center;
+        padding: 20px 0 10px;
+        color: #333;
+        letter-spacing: 1px;
+      }
+
+      /* --- 分類按鈕區 --- */
+      .filter-buttons {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .filter-buttons button {
+        margin: 6px;
+        padding: 8px 16px;
+        font-size: 16px;
+        border: none;
+        border-radius: 20px;
+        background-color: #ddd;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .filter-buttons button.active {
+        background-color: #333;
+        color: white;
+      }
+
+      .filter-buttons button:hover {
+        background-color: #666;
+        color: white;
+      }
+
+      /* --- 圖片區 --- */
+      .image-container {
+        column-count: 4;
+        column-gap: 12px;
+        padding: 12px;
+      }
+
+      .image-container img {
+        width: 100%;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        background: #e0e0e0;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .image-container img.loaded {
+        opacity: 1;
+      }
+
+      @media (max-width: 900px) {
+        .image-container {
+          column-count: 3;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .image-container {
+          column-count: 2;
+        }
+      }
+
+      .loading {
+        text-align: center;
+        padding: 20px;
+        font-size: 16px;
+        color: #666;
+      }
+    </style>
+  </body>
+</html>

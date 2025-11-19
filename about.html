@@ -1,300 +1,243 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png" />
 
-<head>
-	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cut-You ｜ Perth Hair Salon | AI Hair Wash, Haircut & Scalp Treatment in WA</title>
+    <meta
+      name="description"
+      content="Experience next-level hair care in Perth. Cut-You offers AI hair wash, professional haircuts, deep conditioning, and scalp treatments. Stylish, relaxing, and designed for all hair types—book your session today."
+    />
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+    <link rel="canonical" href="https://www.cut-you.com/" />
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Cut-You",
+        "image": "https://www.cut-you.com/your-image.jpg",
+        "url": "https://www.cut-you.com/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Perth",
+          "addressRegion": "WA",
+          "addressCountry": "Australia"
+        },
+        "description": "Perth hair salon offering AI hair wash, haircuts, and scalp treatments.",
+        "priceRange": "$$"
+      }
+    </script>
 
-	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:site_name" content="" />
-	<meta property="og:description" content="" />
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+    <!-- Open Graph (Facebook, LINE 分享) -->
+    <meta property="og:title" content="Cut-You ｜ Perth Hair Salon in WA" />
+    <meta
+      property="og:description"
+      content="AI hair wash, haircut, scalp treatment and more. A premium, relaxing hair salon in Perth."
+    />
+    <meta property="og:url" content="https://www.cut-you.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.cut-you.com/your-image.jpg" />
 
-	<!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet"> -->
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cut-You ｜ Perth Hair Salon" />
+    <meta name="twitter:description" content="AI hair wash, haircut, scalp treatments and more in Perth." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>關於我們 | Style Salon</title>
+    <!-- 載入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* 導航連結樣式 (與首頁保持一致) */
+      .nav-link {
+        @apply text-gray-700 hover:text-teal-600 transition duration-150 py-5;
+      }
+      /* 更新: '關於我們' 頁面的 active 樣式 */
+      .nav-link.active {
+        @apply text-teal-700 font-bold border-b-3 border-teal-600;
+        border-bottom-width: 3px;
+      }
+      .mobile-menu-link {
+        @apply block px-3 py-3 text-base font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-600 rounded-md;
+      }
+      .mobile-menu-link.active {
+        @apply bg-teal-100 text-teal-700;
+      }
 
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Themify Icons-->
-	<link rel="stylesheet" href="css/themify-icons.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+      /* 行動裝置菜單切換動畫 */
+      #mobile-menu {
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      }
+      /* 卡片懸停效果 */
+      .feature-card {
+        @apply bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- 響應式 Header 導航欄 (保留並更新 Active Link) -->
+    <div id="header-placeholder"></div>
+    <main>
+      <!-- 頂部標題區域 -->
+      <section class="bg-teal-50 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-5xl font-extrabold text-gray-900 mb-4">The Story</h1>
+          <p class="text-xl text-gray-600">From modest beginnings to setting the standard in style.</p>
+        </div>
+      </section>
 
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
+      <!-- 第一欄: 我們的使命 (文字左, 圖片右) -->
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row items-center gap-10 lg:gap-16">
+            <!-- 左側：文字敘述 -->
+            <div class="md:w-1/2 space-y-6 order-2 md:order-1">
+              <span class="text-sm font-semibold text-teal-600 uppercase tracking-wider">The core</span>
+              <h2 class="text-4xl font-bold text-gray-800">
+                Where confidence and professionalism meet, beauty shines.
+              </h2>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Since 2024, Cut-You has been transforming hair into an expression of individuality. Beyond top-quality
+                haircuts, coloring, and treatments, we focus on creating a signature style for each client. Our skilled
+                designers continually embrace the latest fashion trends, keeping you effortlessly stylish.
+              </p>
+              <p class="text-gray-600 text-lg leading-relaxed border-l-4 border-teal-500 pl-4 italic">
+                「Each look is an expression of creativity and the art of beauty.」
+              </p>
+              <ul class="space-y-3 pt-2 text-gray-700">
+                <li class="flex items-start">
+                  <svg
+                    class="h-5 w-5 text-teal-500 mr-2 flex-shrink-0 mt-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>We are committed to using top-quality, environmentally friendly products.</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="h-5 w-5 text-teal-500 mr-2 flex-shrink-0 mt-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>We create a comfortable and relaxing salon environment.</span>
+                </li>
+              </ul>
+            </div>
 
-	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+            <!-- 右側：圖片 -->
+            <div class="md:w-1/2 rounded-xl shadow-2xl overflow-hidden order-1 md:order-2">
+              <img
+                src="./images/shopview-4.jpg"
+                alt=" Style Salon 專業沙龍內部團隊合作圖片"
+                class="w-full h-full object-cover transform hover:scale-105 transition duration-500"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/Mystyle.css">
+      <!-- 第二欄: 團隊哲學 (4 張卡片) -->
+      <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Our team</h2>
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- 卡片 1: 創新 -->
+            <div class="feature-card">
+              <div class="text-teal-600 mb-4">
+                <!-- 閃電圖標 -->
+                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Continuous Innovation</h4>
+              <p class="text-gray-500 text-base">
+                We constantly learn the latest technologies and trends to ensure our clients receive the most
+                cutting-edge and fashionable styling solutions.
+              </p>
+            </div>
 
-</head>
+            <!-- 卡片 2: 專業 -->
+            <div class="feature-card">
+              <div class="text-teal-600 mb-4">
+                <!-- 皇冠圖標 -->
+                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4M7.864 4.254A1 1 0 018.66 3h6.68a1 1 0 01.795 1.254l-.443 1.554A12.015 12.015 0 0012 6a12.015 12.015 0 00-3.612-.444l-.444-1.554zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Top Professionalism</h4>
+              <p class="text-gray-500 text-base">
+                Every stylist undergoes rigorous training and certification to serve you to the highest standards.
+              </p>
+            </div>
 
-<body>
+            <!-- 卡片 3: 客製化 -->
+            <div class="feature-card">
+              <div class="text-teal-600 mb-4">
+                <!-- 量身定製圖標 -->
+                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.143M21 21v-7a3 3 0 00-3-3h-2"
+                  />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Personalized Design</h4>
+              <p class="text-gray-500 text-base">
+                We deeply understand your needs and lifestyle to provide completely personalized hair designs.
+              </p>
+            </div>
 
-	<div class="gtco-loader"></div>
+            <!-- 卡片 4: 永續 -->
+            <div class="feature-card">
+              <div class="text-teal-600 mb-4">
+                <!-- 葉子圖標 -->
+                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Sustainability</h4>
+              <p class="text-gray-500 text-base">
+                We are committed to using environmentally friendly products and fulfilling our environmental commitments
+                in salon operations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-	<div id="page">
-		<nav class="gtco-nav" role="navigation">
-			<div class="gtco-container">
-				<div class="row">
-					<div class="col-md-12 text-left gtco-contact">
-						<ul class="">
-							<li><a href='index.html'>繁體中文</a> &nbsp; | &nbsp;
-								<a href='En_index.html'>English</a> </font>
-							</li>
-							<!-- <li><a href="#"><i class="ti-mobile"></i> +1 (0)123 456 7890 </a></li> -->
-							<li><a href="#"><i class="ti-twitter-alt"></i> </a></li>
-							<li><a href="#"><i class="icon-mail2"></i></a></li>
-							<li><a type="button" class="" data-toggle="modal" data-target="#flipFlop"><i
-										class="icon-search"></i></a></li>
-						</ul>
-					</div>
-				</div>
+    <!-- 頁腳 (Footer) 區塊 (保持不變) -->
+    <div id="footer-placeholder"></div>
 
-
-				<div class="row">
-					<div class="col-xs-12 text-center">
-						<div id="gtco-logo">
-							<a href="index.html"></a>
-						</div>
-					</div>
-					<div class="col-xs-12 text-right menu-1">
-						<ul>
-							<li><a href="index.html">首頁</a></li>
-							<li><a href="about.html">關於我們</a></li>
-							<li class="has-dropdown">
-								<a href="#">保健原料</a>
-								<ul class="dropdown">
-									<li><a href="product1.html">原料類別</a></li>
-									<li><a href="product2.html">品牌原料</a></li>
-									<li><a href="product3.html">功能性原料</a></li>
-									<li><a href="product3.html">寵物原料</a></li>
-								</ul>
-							</li>
-							<li class="has-dropdown">
-								<a href="#">配方設計</a>
-								<ul class="dropdown">
-									<li><a href="mdesign.html#section0">ODM</a></li>
-									<li><a href="mdesign.html#section1">劑型開發</a></li>
-
-								</ul>
-							</li>
-							<li class="#"><a href="News.html">最新消息</a></li>
-							<li><a href="contact.html">聯絡我們</a></li>
-
-						</ul>
-					</div>
-				</div>
-
-
-			</div>
-		</nav>
-		<!-- The modal -->
-		<div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<form class="navbar-form navbar-left" role="search">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search">
-					</div>
-					<button type="submit" class="btn btn-default">Submit</button>
-				</form>
-			</div>
-		</div>
-		<!-- The modal -->
-
-		<header id="gtco-header" class="gtco-cover gtco-cover-xs" role="banner"
-			style="background-image:url(images/img_bg_1.jpg);">
-			<div class="overlay"></div>
-			<div class="gtco-container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center">
-						<div class="display-t">
-							<div class="display-tc">
-								<h1 class="animate-box" data-animate-effect="fadeInUp">關於我們</h1>
-								<h2 class="animate-box" data-animate-effect="fadeInUp">About us</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-
-
-
-		<div id="gtco-team" class="gtco-section">
-			<div class="gtco-container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-						<h2>新樂康頂尖團隊</h2>
-						<p></p>
-					</div>
-				</div>
-
-
-				<div class="row">
-
-					<div class="col-lg-4 col-md-4 col-sm-6 animate-box" data-animate-effect="fadeIn">
-						<div class="gtco-staff">
-							<img src="images/person_1.jpg" alt="Free HTML5 Templates by ">
-							<h3>Jodan</h3>
-							<strong class="role">業務經理</strong>
-							<p>30年經驗資深業務</p>
-							<ul class="gtco-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
-								<li><a href="#"><i class="icon-github"></i></a></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-4 col-sm-6 animate-box" data-animate-effect="fadeIn">
-						<div class="gtco-staff">
-							<img src="images/person_2.jpg" alt="Free HTML5 Templates by ">
-							<h3>jackson</h3>
-							<strong class="role">業務經理</strong>
-							<p>30年經驗資深業務</p>
-							<ul class="gtco-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
-								<li><a href="#"><i class="icon-github"></i></a></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="clearfix visible-sm-block"></div>
-					<div class="col-lg-4 col-md-4 col-sm-6 animate-box" data-animate-effect="fadeIn">
-						<div class="gtco-staff">
-							<img src="images/person_3.jpg" alt="Free HTML5 Templates by ">
-							<h3>elon musk</h3>
-							<strong class="role">專業營養師</strong>
-							<p>30年經驗資深營養師</p>
-							<ul class="gtco-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
-								<li><a href="#"><i class="icon-github"></i></a></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="clearfix visible-lg-block visible-md-block"></div>
-
-					<div class="col-lg-4 col-md-4 col-sm-6 animate-box" data-animate-effect="fadeIn">
-						<div class="gtco-staff">
-							<img src="images/person_1.jpg" alt="Free HTML5 Templates by ">
-							<h3>jack ma</h3>
-							<strong class="role">專業營養師</strong>
-							<p>30年經驗資深營養師</p>
-							<ul class="gtco-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
-								<li><a href="#"><i class="icon-github"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="clearfix visible-sm-block"></div>
-					<div class="col-lg-4 col-md-4 col-sm-6 animate-box" data-animate-effect="fadeIn">
-						<div class="gtco-staff">
-							<img src="images/person_2.jpg" alt="Free HTML5 Templates by ">
-							<h3>jobs</h3>
-							<strong class="role">研發顧問</strong>
-							<p>30年經驗資深顧問</p>
-							<ul class="gtco-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
-								<li><a href="#"><i class="icon-github"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 animate-box" data-animate-effect="fadeIn">
-						<div class="gtco-staff">
-							<img src="images/person_3.jpg" alt="Free HTML5 Templates by ">
-							<h3>Lufee</h3>
-							<strong class="role">研發顧問</strong>
-							<p>30年經驗資深顧問</p>
-							<ul class="gtco-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
-								<li><a href="#"><i class="icon-github"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="clearfix visible-sm-block"></div>
-				</div>
-
-			</div>
-		</div>
-
-
-
-		<!-- Footer 容器 -->
-		<div id="footer">
-
-		</div>	
-		<!-- END Footer -->
-	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
-
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
-	<!-- Main -->
-	<script src="js/main.js"></script>
-	<script>
-		fetch("./footer.html")
-			.then(res => res.text())
-			.then(html => document.getElementById("footer").innerHTML = html)
-			.catch(err => console.error("Footer load error:", err));
-	</script>
-
-</body>
-
+    <script src="./main.js"></script>
+  </body>
 </html>
