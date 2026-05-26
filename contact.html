@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
   <head>
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon.png" />
@@ -71,7 +71,9 @@
 
       /* 行動裝置菜單切換動畫 */
       #mobile-menu {
-        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        transition:
+          max-height 0.5s ease-in-out,
+          opacity 0.5s ease-in-out;
       }
 
       /* 表單輸入框基礎樣式 */
@@ -204,8 +206,12 @@
                 <p class="text-xl font-bold text-teal-700 mb-3">OPENING HOURS</p>
                 <ul class="text-gray-700 space-y-2 text-base">
                   <li class="flex justify-between border-b border-gray-100 pb-1">
-                    <span class="font-semibold">Monday-Saturday</span>
-                    <span>9:30 AM - 5:00 PM</span>
+                    <span class="font-semibold">Monday-Friday</span>
+                    <span>9:00 AM - 5:30 PM</span>
+                  </li>
+                  <li class="flex justify-between border-b border-gray-100 pb-1">
+                    <span class="font-semibold">Saturday</span>
+                    <span>9:00 AM - 5:00 PM</span>
                   </li>
                   <li class="flex justify-between border-b border-gray-100 pb-1">
                     <span class="font-semibold">Sunday</span>
