@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
   <head>
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon.png" />
@@ -86,7 +86,9 @@
 
       /* 為了確保 max-h-screen 動畫效果，我們需要手動設定一些過渡屬性 */
       #mobile-menu {
-        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        transition:
+          max-height 0.5s ease-in-out,
+          opacity 0.5s ease-in-out;
       }
       .serv-svg {
         width: 100%;
@@ -220,7 +222,8 @@
         const moveToSlide = (i) => ((currentSlideIndex = i), updateCarousel())
         const moveNext = () => ((currentSlideIndex = (currentSlideIndex + 1) % slideCount), updateCarousel())
         const movePrev = () => (
-          (currentSlideIndex = (currentSlideIndex - 1 + slideCount) % slideCount), updateCarousel()
+          (currentSlideIndex = (currentSlideIndex - 1 + slideCount) % slideCount),
+          updateCarousel()
         )
 
         nextButton.addEventListener('click', moveNext)
@@ -525,5 +528,145 @@
 
     <!-- 頁腳 (Footer) 區塊 -->
     <script src="./main.js"></script>
+
+    <!-- 活動海報彈窗 -->
+    <div id="promoModal" class="modal">
+      <span class="close">&times;</span>
+
+      <div class="modal-content">
+        <!-- 換成你的海報檔案 -->
+        <img src="./images/event.jpg" alt="最新促銷活動" class="promo-image" id="promoImage" />
+      </div>
+    </div>
+    <style>
+      /* 彈窗背景 */
+      .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background: rgba(0, 0, 0, 0.85);
+
+        z-index: 9999;
+      }
+
+      /* 內容區 */
+      .modal-content {
+        position: relative;
+
+        width: 90vw;
+        height: 90vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: auto;
+      }
+
+      /* 海報 */
+      .promo-image {
+        max-width: 100%;
+        max-height: 100%;
+
+        width: auto;
+        height: auto;
+
+        object-fit: contain;
+
+        cursor: zoom-in;
+
+        transition: transform 0.3s ease;
+      }
+
+      /* 關閉按鈕 */
+      .close {
+        position: fixed;
+
+        top: 15px;
+        right: 25px;
+
+        color: white;
+
+        font-size: 50px;
+        font-weight: bold;
+
+        cursor: pointer;
+
+        z-index: 10000;
+      }
+
+      .close:hover {
+        color: #ffcc00;
+      }
+
+      /* 手機版 */
+      @media (max-width: 768px) {
+        .modal-content {
+          width: 100vw;
+          height: 100vh;
+
+          padding: 0;
+          margin: 0;
+        }
+
+        .promo-image {
+          width: 100%;
+          height: 100%;
+
+          object-fit: contain;
+        }
+
+        .close {
+          top: 10px;
+          right: 15px;
+
+          font-size: 40px;
+        }
+      }
+    </style>
+    <script>
+      const modal = document.getElementById('promoModal')
+      const closeBtn = document.querySelector('.close')
+      const img = document.getElementById('promoImage')
+
+      /* 關閉按鈕 */
+      closeBtn.onclick = function () {
+        modal.style.display = 'none'
+      }
+
+      /* 點背景關閉 */
+      modal.onclick = function (e) {
+        if (e.target === modal) {
+          modal.style.display = 'none'
+        }
+      }
+
+      /* 點圖片放大縮小 */
+      let zoomed = false
+
+      img.addEventListener('click', function (e) {
+        e.stopPropagation()
+
+        if (!zoomed) {
+          img.style.transform = 'scale(2)'
+          img.style.cursor = 'zoom-out'
+
+          zoomed = true
+        } else {
+          img.style.transform = 'scale(1)'
+          img.style.cursor = 'zoom-in'
+
+          zoomed = false
+        }
+      })
+    </script>
   </body>
 </html>
