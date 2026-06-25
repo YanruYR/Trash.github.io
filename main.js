@@ -61,6 +61,10 @@ function initHeaderVars() {
 //   updateCarousel()
 // }
 // 漢堡選單初始化
+document.addEventListener('DOMContentLoaded', () => {
+  initHamburgerMenu()
+})
+
 function initHamburgerMenu() {
   const btn = document.getElementById('mobile-menu-button')
   const menu = document.getElementById('mobile-menu')
@@ -72,7 +76,8 @@ function initHamburgerMenu() {
   btn.addEventListener('click', () => {
     const open = menu.classList.contains('max-h-0')
     menu.classList.toggle('max-h-0', !open)
-    menu.classList.toggle('max-h-96', open)
+    // 設定適當的 max-h 確保手機選單高度能完美容納所有選項
+    menu.classList.toggle('max-h-[500px]', open)
     menu.classList.toggle('opacity-0', !open)
     menu.classList.toggle('opacity-100', open)
 

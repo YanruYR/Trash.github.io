@@ -105,6 +105,14 @@
       <div id="header-placeholder"></div>
     </div>
 
+    <!-- 網頁內容預覽區（僅供預覽效果展示，可隨意滑動） -->
+    <main class="max-w-4xl mx-auto px-6 py-24 text-center text-black relative z-10">
+      <h1 class="text-4xl md:text-6xl font-light tracking-widest mb-4">CUT-YOU</h1>
+      <p class="text-sm md:text-base tracking-widest text-gray-500 uppercase mb-8">
+        AI Artistry & Premium Scalp Care Salon
+      </p>
+    </main>
+
     <main class="py-12">
       <h3 class="text-3xl font-bold text-red-500 text-center"></h3>
       <!-- 原始內容: 輪播圖 (保持不變) -->
@@ -235,19 +243,40 @@
         }
       </script>
 
-      <!-- 第一欄: 圖片左, 文字右 (關於我們) -->
-      <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">New Arrival</h2>
-          <div class="flex flex-col md:flex-row items-center gap-8 lg:gap-12">
+      <!-- 💎 第一欄: 圖片左, 文字右 (關於我們 / AI 科技洗頭機) -->
+      <section class="py-24 bg-[#faf8f5] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <!-- 區塊小標題：法式奢華風字距拉大 -->
+          <div class="text-center mb-16">
+            <span class="text-xs tracking-[0.3em] text-[#9f892f] font-semibold uppercase block mb-3">NEW ARRIVAL</span>
+            <h2 class="text-3xl sm:text-4xl font-light tracking-widest text-[#1c1a17] uppercase">
+              The Future of Scalp Artistry
+            </h2>
+          </div>
+
+          <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <!-- 左側圖片：帶有細微香檳金外框與流暢懸停提拉 -->
             <div
-              class="md:w-1/2 rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300"
+              class="w-full lg:w-1/2 rounded-2xl overflow-hidden border border-[#9f892f]/15 shadow-xl hover:shadow-2xl hover:border-[#9f892f]/30 transform hover:scale-[1.01] transition-all duration-500"
             >
-              <img src="./images/shopview-2.jpg" alt="" class="w-full h-full object-cover" />
+              <img
+                src="./images/shopview-2.jpg"
+                alt="Salon Premium View"
+                class="w-full h-[320px] sm:h-[450px] object-cover"
+                onerror="
+                  this.src = 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80'
+                "
+              />
             </div>
-            <div class="md:w-1/2 space-y-6">
-              <h3 class="text-3xl font-bold text-teal-600">Australia’s First Automatic Hair-Washing Machine</h3>
-              <p class="text-gray-600 text-lg leading-relaxed">
+
+            <!-- 右側內容：精緻排版與高雅香檳金勾選清單 -->
+            <div class="w-full lg:w-1/2 space-y-8">
+              <h3 class="text-2xl sm:text-3xl font-light tracking-wide text-[#1c1a17] leading-tight">
+                Australia’s First <br />
+                <span class="text-[#9f892f] font-normal">Automatic Hair-Washing Machine</span>
+              </h3>
+
+              <p class="text-gray-600 text-sm sm:text-base leading-relaxed font-light">
                 We have partnered with a leading smart-technology R&D company from Taiwan to bring this innovative
                 solution to Australia. Our automatic hair-washing machine integrates intelligent sensors, gentle water
                 flow, and multi-mode scalp massage to deliver precise care and deep cleansing—creating a truly
@@ -255,37 +284,54 @@
                 machine makes hair washing effortless. Let advanced technology help you relax, rejuvenate, and elevate
                 your quality of life.
               </p>
-              <ul class="space-y-2 text-gray-700">
+
+              <!-- 精緻極細金線勾選清單 -->
+              <ul class="space-y-4 text-xs sm:text-sm tracking-wide text-gray-700 font-light">
                 <li class="flex items-start">
                   <svg
-                    class="h-5 w-5 text-teal-500 mr-2 flex-shrink-0 mt-1"
+                    class="h-5 w-5 text-[#9f892f] mr-3 flex-shrink-0 mt-0.5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    stroke-width="1.5"
                   >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                   <span>Market-Optimized, Traffic-Driven Product Design</span>
                 </li>
                 <li class="flex items-start">
                   <svg
-                    class="h-5 w-5 text-teal-500 mr-2 flex-shrink-0 mt-1"
+                    class="h-5 w-5 text-[#9f892f] mr-3 flex-shrink-0 mt-0.5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    stroke-width="1.5"
                   >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                   <span>A Systematic and Seamless Comfort Experience</span>
                 </li>
                 <li class="flex items-start">
                   <svg
-                    class="h-5 w-5 text-teal-500 mr-2 flex-shrink-0 mt-1"
+                    class="h-5 w-5 text-[#9f892f] mr-3 flex-shrink-0 mt-0.5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    stroke-width="1.5"
                   >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                   <span>A Multifunctional Design for Deep Relaxation of Body and Mind</span>
                 </li>
@@ -295,229 +341,272 @@
         </div>
       </section>
 
-      <!-- 第二欄: 文字左, 圖片右 (交替佈局) -->
-      <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex flex-col md:flex-row-reverse items-center gap-8 lg:gap-12">
+      <!-- 💎 第二欄: 文字左, 圖片右 (交替規格排版) -->
+      <section class="py-24 bg-[#f4f1eb]/50 border-t border-b border-[#9f892f]/10">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16">
+            <!-- 右側圖片：香檳金外框與微投影 -->
             <div
-              class="md:w-1/2 rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300"
+              class="w-full lg:w-1/2 rounded-2xl overflow-hidden border border-[#9f892f]/15 shadow-xl hover:shadow-2xl hover:border-[#9f892f]/30 transform hover:scale-[1.01] transition-all duration-500"
             >
-              <img src="./images/machine01.png" alt="" class="w-full h-full object-cover" />
+              <img
+                src="./images/machine01.png"
+                alt="AI Smart Hair Washing Machine"
+                class="w-full h-[320px] sm:h-[450px] object-cover"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1522337360788-8b13edd793be?auto=format&fit=crop&w=800&q=80'
+                "
+              />
             </div>
-            <div class="md:w-1/2 space-y-6">
-              <h3 class="text-3xl font-bold text-gray-800">Automatic Hair-Washing Machine</h3>
-              <p class="text-gray-600 text-lg leading-relaxed">
-                specifications: <br />Length 220cm, Width 85cm, Height 90cm, Voltage 220V (requires 2 sockets, total
-                power not exceeding 1000W)
-              </p>
-              <p>
+
+            <!-- 左側文字與極簡科技規格表 -->
+            <div class="w-full lg:w-1/2 space-y-8">
+              <span class="text-xs tracking-[0.3em] text-[#9f892f] font-semibold uppercase block">AUTOMATION ERA</span>
+              <h3 class="text-2xl sm:text-3xl font-light tracking-widest text-[#1c1a17]">Automatic Washing System</h3>
+
+              <p class="text-gray-600 text-sm sm:text-base leading-relaxed font-light">
                 The fully automatic hair-washing machine replaces manual labor with an advanced, hands-free system,
                 offering customers a more affordable, comfortable, healthy, and safe hair-washing experience. In this
                 new era of automation, the machine not only reduces labor costs but also attracts more customers,
                 boosting overall business efficiency.
               </p>
-              <a
-                href="./machine.html"
-                class="inline-flex items-center text-teal-600 font-semibold hover:text-teal-800 transition duration-150"
+
+              <!-- 💎 升級：極簡奢華規格格線排版 (Minimalist Tech Grid) -->
+              <div
+                class="border-t border-b border-[#9f892f]/20 py-5 space-y-4 text-xs sm:text-sm tracking-widest font-light text-gray-700"
               >
-                view more
-                <svg class="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-400 uppercase">SPECIFICATIONS</span>
+                  <span class="text-[#1c1a17] font-medium">L 220cm &times; W 85cm &times; H 90cm</span>
+                </div>
+                <div class="flex justify-between items-center pt-3 border-t border-gray-200/60">
+                  <span class="text-gray-400 uppercase">VOLTAGE</span>
+                  <span class="text-[#1c1a17] font-medium">220V (requires 2 sockets)</span>
+                </div>
+                <div class="flex justify-between items-center pt-3 border-t border-gray-200/60">
+                  <span class="text-gray-400 uppercase">POWER CONSUMPTION</span>
+                  <span class="text-[#1c1a17] font-medium">Total power &le; 1000W</span>
+                </div>
+              </div>
+
+              <!-- 奢華微滑過動畫的連結按鈕 -->
+              <div class="pt-2">
+                <a
+                  href="./machine.html"
+                  class="inline-flex items-center text-xs tracking-[0.2em] uppercase text-[#9f892f] hover:text-[#bfa64e] font-semibold transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:bg-[#9f892f] hover:after:bg-[#bfa64e] after:transition-colors"
+                >
+                  View More Machine Specs &rarr;
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 第四欄: 4 張卡片 (一排 4 張佈局) -->
-      <section class="py-16 md:py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <!-- 區塊一: 我們的價值觀 (Our Values) -->
-          <div class="mb-8 md:mb-16">
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 text-center mb-4 leading-tight">
+      <!-- 💎 第三區塊 (原第四欄): 我們的承諾與價值觀 (Our Values) -->
+      <section class="py-24 bg-[#faf8f5]">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <!-- 頂部奢華導言 -->
+          <div class="text-center max-w-3xl mx-auto mb-20">
+            <span class="text-xs tracking-[0.3em] text-[#9f892f] font-semibold uppercase block mb-3"
+              >OUR PHILOSOPHY</span
+            >
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light tracking-widest text-[#1c1a17] mb-6 leading-tight">
               Delivering a Premium Service
             </h2>
-            <p class="text-xl text-gray-500 text-left mb-12 max-w-2xl mx-auto">
+            <p class="text-gray-500 text-sm sm:text-base leading-relaxed font-light">
               Our team of skilled stylists are passionate about hair and dedicated to delivering results that exceed
               your expectations. With years of experience and ongoing training in the latest techniques and trends, you
-              can trust us to create the perfect look for you.we understand that every client is unique, which is why we
-              take the time to listen to your needs and preferences before crafting a customised haircut that suits your
-              individual style and personality. We believe in using only the best products to nourish and enhance your
-              hair. From luxurious shampoos and conditioners to professional styling products, we stock a wide range of
-              premium brands to ensure your hair looks and feels its best.
+              can trust us to create the perfect look for you. We understand that every client is unique, which is why
+              we take the time to listen to your needs and preferences before crafting a customized haircut that suits
+              your individual style and personality. We believe in using only the best products to nourish and enhance
+              your hair.
             </p>
+          </div>
 
-            <!-- 價值觀單一區塊佈局 (Icon on Left, Text on Right) -->
-            <div class="group p-8 md:p-12 rounded-3xl transition duration-500">
-              <div class="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-12">
-                <!-- 圖標/圖片容器 (Left) -->
-                <div
-                  class="large-icon-container bg-teal-50 rounded-3xl flex items-center justify-center overflow-hidden ring-8 ring-teal-200 transition flex-shrink-0 group-hover:scale-[1.05] duration-500"
+          <!-- 💎 承諾單一卡片：升級為細邊暖白霧金框 (Champagne Soft-Card) -->
+          <div
+            class="group bg-[#fcfbfa] border border-[#9f892f]/15 rounded-3xl p-8 sm:p-12 transition-all duration-500 hover:border-[#9f892f]/30 hover:shadow-xl hover:shadow-[#9f892f]/5"
+          >
+            <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
+              <!-- 圖標容器：純向量香檳金細線指南針圖標 -->
+              <div
+                class="w-20 h-20 sm:w-24 sm:h-24 bg-[#faf8f5] rounded-2xl flex items-center justify-center border border-[#9f892f]/20 ring-4 ring-[#9f892f]/5 transition-transform duration-500 group-hover:scale-105 flex-shrink-0"
+              >
+                <svg
+                  class="w-10 h-10 sm:w-12 sm:h-12 text-[#9f892f]"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                  viewBox="0 0 24 24"
                 >
-                  <!-- 使用指南針圖標，象徵方向和核心價值 -->
-                  <svg
-                    class="w-24 h-24 text-teal-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253"
+                  />
+                </svg>
+              </div>
+
+              <!-- 文字內容 -->
+              <div class="flex-1 text-center lg:text-left space-y-4">
+                <h3
+                  class="text-2xl font-light tracking-widest text-[#1c1a17] transition-colors group-hover:text-[#9f892f]"
+                >
+                  Our Commitment
+                </h3>
+                <p class="text-gray-500 text-sm sm:text-base leading-relaxed font-light">
+                  Our existence is based on a set of unbreakable principles that guide every interaction we have with
+                  our customers, our teams, and the planet.
+                </p>
+
+                <!-- 核心價值列表：暖金色細線勾選 -->
+                <ul class="space-y-3.5 text-xs sm:text-sm text-gray-700 tracking-wide font-light text-left pt-2">
+                  <li class="flex items-center">
+                    <svg
+                      class="w-5 h-5 mr-3 text-[#9f892f] flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
                       stroke-width="1.5"
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14v4M12 21a9 9 0 100-18 9 9 0 000 18z"
-                    ></path>
-                  </svg>
-                </div>
-
-                <!-- 文字內容 (Right) -->
-                <div class="flex flex-col text-center md:text-left">
-                  <h3 class="text-3xl font-extrabold text-gray-900 mb-4 group-hover:text-teal-700 transition">
-                    Our Commitment
-                  </h3>
-                  <p class="text-xl text-gray-700 mb-6">
-                    Our existence is based on a set of unbreakable principles that guide every interaction we have with
-                    our customers, our teams, and the planet.
-                  </p>
-
-                  <!-- 核心價值列表 -->
-                  <ul class="space-y-3 text-lg text-gray-600 md:text-left text-center">
-                    <li class="flex items-center justify-center md:justify-start">
-                      <svg
-                        class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
-                      Professional Craftsmanship: Pursuing technological excellence and continuous innovation.
-                    </li>
-                    <li class="flex items-center justify-center md:justify-start">
-                      <svg
-                        class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
-                      Sustainability and Environmental Protection: Prioritizing the use of environmentally friendly
-                      products and taking responsibility for the environment.
-                    </li>
-                    <li class="flex items-center justify-center md:justify-start">
-                      <svg
-                        class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
-                      Customer-Centric Approach: Providing customized services and placing customer experience at the
-                      core.
-                    </li>
-                  </ul>
-                </div>
+                      viewBox="0 0 24 24"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span
+                      >Professional Craftsmanship: Pursuing technological excellence and continuous innovation.</span
+                    >
+                  </li>
+                  <li class="flex items-center">
+                    <svg
+                      class="w-5 h-5 mr-3 text-[#9f892f] flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span
+                      >Sustainability and Environmental Protection: Prioritizing eco-friendly products and environmental
+                      duty.</span
+                    >
+                  </li>
+                  <li class="flex items-center">
+                    <svg
+                      class="w-5 h-5 mr-3 text-[#9f892f] flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span
+                      >Customer-Centric Approach: Providing customized services and placing customer experience at the
+                      core.</span
+                    >
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <!-- 區塊二: 為什麼選擇我們？ (Why Choose Us?) - 現在也沒有白色背景 -->
-          <div class="pt-16 md:pt-24">
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 text-center mb-4 leading-tight">
-              Why choose us?
-            </h2>
-            <p class="text-xl text-gray-500 text-center mb-12 max-w-2xl mx-auto">
-              We combine professional expertise with high-quality service to ensure you have an unparalleled experience
-              every time you visit.
+      <!-- 💎 區塊四: 為什麼選擇我們？ (Why Choose Us?) -->
+      <section class="py-24 bg-[#f4f1eb]/30 border-t border-[#9f892f]/10">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div class="text-center max-w-2xl mx-auto mb-20">
+            <span class="text-xs tracking-[0.3em] text-[#9f892f] font-semibold uppercase block mb-3">ADVANTAGES</span>
+            <h2 class="text-3xl sm:text-4xl font-light tracking-widest text-[#1c1a17]">Why Choose Us?</h2>
+            <p class="text-gray-400 text-sm tracking-wider mt-3 font-light">
+              We combine professional expertise with high-quality service to ensure an unparalleled experience.
             </p>
+          </div>
 
-            <!-- 優勢兩欄式特點列表 (無背景卡片樣式) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-10">
-              <!-- 優勢 1: 大師級設計師 -->
-              <div class="flex items-start space-x-4">
-                <!-- Icon: 皇冠 (Master Stylists) -->
-                <div class="text-3xl text-yellow-500 flex-shrink-0 mt-1">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="text-xl font-semibold text-gray-900">Experienced Design Team</h4>
-                  <p class="mt-1 text-gray-600">
-                    Our seasoned designers, with years of experience, bring you the most cutting-edge styles.
-                  </p>
-                </div>
+          <!-- 💎 升級：優勢兩欄式特點列表 (法式霧金極簡佈局) -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-12">
+            <!-- 優勢 1: 大師級設計師 -->
+            <div class="flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white/45">
+              <!-- Icon: 皇冠 (Crown SVG) -->
+              <div class="text-[#9f892f] flex-shrink-0 mt-1">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                  />
+                </svg>
               </div>
-
-              <!-- 優勢 2: 個性化諮詢 -->
-              <div class="flex items-start space-x-4">
-                <!-- Icon: 聊天泡泡 (Consultation) -->
-                <div class="text-3xl text-blue-500 flex-shrink-0 mt-1">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path>
-                    <path
-                      d="M15 7v2a4 4 0 01-4 4H9.071l-.867.868-2.122 2.121C4.683 17.054 5 16.5 5 16v-2h6a2 2 0 002-2V7h2z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="text-xl font-semibold text-gray-900">Premium Salon Products</h4>
-                  <p class="mt-1 text-gray-600">
-                    All products are from internationally renowned salon brands, ensuring your hair receives optimal
-                    nourishment before and after styling.
-                  </p>
-                </div>
+              <div class="space-y-1.5">
+                <h4 class="text-lg font-medium text-[#1c1a17] tracking-wider">Experienced Design Team</h4>
+                <p class="text-sm text-gray-500 leading-relaxed font-light">
+                  Our seasoned designers, with years of experience, bring you the most cutting-edge styles.
+                </p>
               </div>
+            </div>
 
-              <!-- 優勢 3: 頂級護理產品 -->
-              <div class="flex items-start space-x-4">
-                <!-- Icon: 閃電 (Premium Products) -->
-                <div class="text-3xl text-red-500 flex-shrink-0 mt-1">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fill-rule="evenodd"
-                      d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.832 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.832-1.573l7-10z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="text-xl font-semibold text-gray-900">Premium Salon Products</h4>
-                  <p class="mt-1 text-gray-600">
-                    We provide a tranquil and relaxing space, allowing you to unwind and rejuvenate while enjoying your
-                    hair services.
-                  </p>
-                </div>
+            <!-- 優勢 2: 頂級沙龍產品 -->
+            <div class="flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white/45">
+              <!-- Icon: 星座/微光 (Sparkles SVG) -->
+              <div class="text-[#9f892f] flex-shrink-0 mt-1">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.813 15.904L9 21l-1.81-5.096L2 15l5.096-1.81L9 8l1.81 5.096L16 15l-6.187.904zM18.071 5.929l-.707.707m-1.414 1.414l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  />
+                </svg>
               </div>
+              <div class="space-y-1.5">
+                <h4 class="text-lg font-medium text-[#1c1a17] tracking-wider">Premium Salon Products</h4>
+                <p class="text-sm text-gray-500 leading-relaxed font-light">
+                  All products are from internationally renowned salon brands, ensuring your hair receives optimal
+                  nourishment.
+                </p>
+              </div>
+            </div>
 
-              <!-- 優勢 4: 舒適放鬆空間 -->
-              <div class="flex items-start space-x-4">
-                <!-- Icon: 房屋 (Relaxing Environment) -->
-                <div class="text-3xl text-purple-500 flex-shrink-0 mt-1">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="text-xl font-semibold text-gray-900">Comfortable Salon Environment and Facilities</h4>
-                  <p class="mt-1 text-gray-600">
-                    We provide a tranquil and relaxing space, allowing you to unwind and rejuvenate while enjoying your
-                    hair services.
-                  </p>
-                </div>
+            <!-- 優勢 3: 靜謐放鬆空間 (原重複名，語意美化為極致護理體驗) -->
+            <div class="flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white/45">
+              <!-- Icon: 葉子/舒緩 (Leaf SVG) -->
+              <div class="text-[#9f892f] flex-shrink-0 mt-1">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3v18m0-18h-.01M12 3c-4.418 0-8 3.582-8 8a8 8 0 008 8m0-16c4.418 0 8 3.582 8 8a8 8 0 01-8 8"
+                  />
+                </svg>
+              </div>
+              <div class="space-y-1.5">
+                <h4 class="text-lg font-medium text-[#1c1a17] tracking-wider">Tranquil Healing Care</h4>
+                <p class="text-sm text-gray-500 leading-relaxed font-light">
+                  We provide a tranquil and relaxing space, allowing you to unwind and rejuvenate while enjoying your
+                  premium scalp services.
+                </p>
+              </div>
+            </div>
+
+            <!-- 優勢 4: 舒適沙龍設施 -->
+            <div class="flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white/45">
+              <!-- Icon: 沙龍建築 (House SVG) -->
+              <div class="text-[#9f892f] flex-shrink-0 mt-1">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                  />
+                </svg>
+              </div>
+              <div class="space-y-1.5">
+                <h4 class="text-lg font-medium text-[#1c1a17] tracking-wider">Comfortable Salon Environment</h4>
+                <p class="text-sm text-gray-500 leading-relaxed font-light">
+                  We provide a tranquil and relaxing space, allowing you to unwind and rejuvenate while enjoying your
+                  hair services.
+                </p>
               </div>
             </div>
           </div>

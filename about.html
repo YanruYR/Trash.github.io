@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
   <head>
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon.png" />
@@ -71,7 +71,9 @@
 
       /* 行動裝置菜單切換動畫 */
       #mobile-menu {
-        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        transition:
+          max-height 0.5s ease-in-out,
+          opacity 0.5s ease-in-out;
       }
       /* 卡片懸停效果 */
       .feature-card {
@@ -91,144 +93,207 @@
         </div>
       </section>
 
-      <!-- 第一欄: 我們的使命 (文字左, 圖片右) -->
-      <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex flex-col md:flex-row items-center gap-10 lg:gap-16">
-            <!-- 左側：文字敘述 -->
-            <div class="md:w-1/2 space-y-6 order-2 md:order-1">
-              <span class="text-sm font-semibold text-teal-600 uppercase tracking-wider">The core</span>
-              <h2 class="text-4xl font-bold text-gray-800">
-                Where confidence and professionalism meet, beauty shines.
+      <!-- 💎 第一欄: 我們的使命 (文字左, 圖片右) - 升級為奢華暗色與微光細節 -->
+      <section class="py-24 bg-[#12110e] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <!-- 左側：文字敘述 (在手機版依然為 order-2，維持內容閱讀流暢度) -->
+            <div class="w-full lg:w-1/2 space-y-8 order-2 lg:order-1">
+              <span class="text-xs tracking-[0.3em] text-[#9f892f] font-semibold uppercase block"
+                >THE CORE MISSION</span
+              >
+
+              <h2 class="text-3xl sm:text-4xl font-light tracking-widest text-white leading-tight">
+                Where confidence and <br />
+                <span class="text-[#9f892f] font-normal">professionalism meet</span>, beauty shines.
               </h2>
-              <p class="text-gray-600 text-lg leading-relaxed">
+
+              <p class="text-gray-400 text-sm sm:text-base leading-relaxed font-light">
                 Since 2024, Cut-You has been transforming hair into an expression of individuality. Beyond top-quality
                 haircuts, coloring, and treatments, we focus on creating a signature style for each client. Our skilled
                 designers continually embrace the latest fashion trends, keeping you effortlessly stylish.
               </p>
-              <p class="text-gray-600 text-lg leading-relaxed border-l-4 border-teal-500 pl-4 italic">
-                「Each look is an expression of creativity and the art of beauty.」
-              </p>
-              <ul class="space-y-3 pt-2 text-gray-700">
+
+              <!-- 升級：法式微光金框引言 -->
+              <div class="border-l-2 border-[#9f892f] pl-5 py-2 bg-white/[0.01] backdrop-blur-sm rounded-r-lg pr-4">
+                <p class="text-[#bfa64e] text-sm sm:text-base tracking-wide italic font-light leading-relaxed">
+                  "Each look is an expression of creativity and the art of beauty."
+                </p>
+              </div>
+
+              <!-- 升級：霧金細線勾選清單 -->
+              <ul class="space-y-4 text-xs sm:text-sm tracking-wide text-gray-300 font-light pt-2">
                 <li class="flex items-start">
                   <svg
-                    class="h-5 w-5 text-teal-500 mr-2 flex-shrink-0 mt-1"
+                    class="h-5 w-5 text-[#9f892f] mr-3 flex-shrink-0 mt-0.5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    stroke-width="1.5"
                   >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                   <span>We are committed to using top-quality, environmentally friendly products.</span>
                 </li>
                 <li class="flex items-start">
                   <svg
-                    class="h-5 w-5 text-teal-500 mr-2 flex-shrink-0 mt-1"
+                    class="h-5 w-5 text-[#9f892f] mr-3 flex-shrink-0 mt-0.5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    stroke-width="1.5"
                   >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
-                  <span>We create a comfortable and relaxing salon environment.</span>
+                  <span>We create a comfortable, tranquil and highly relaxing salon environment.</span>
                 </li>
               </ul>
             </div>
 
-            <!-- 右側：圖片 -->
-            <div class="md:w-1/2 rounded-xl shadow-2xl overflow-hidden order-1 md:order-2">
+            <!-- 右側：圖片 (帶有細微香檳金外框與流暢懸停提拉) -->
+            <div
+              class="w-full lg:w-1/2 rounded-2xl overflow-hidden border border-[#9f892f]/15 shadow-2xl hover:shadow-3xl hover:border-[#9f892f]/30 transform hover:scale-[1.01] transition-all duration-500 order-1 lg:order-2"
+            >
               <img
                 src="./images/shopview-4.jpg"
-                alt=" Style Salon "
-                class="w-full h-full object-cover transform hover:scale-105 transition duration-500"
+                alt="Style Salon Premium View"
+                class="w-full h-[320px] sm:h-[450px] object-cover"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1522337360788-8b13edd793be?auto=format&fit=crop&w=800&q=80'
+                "
               />
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 第二欄: 團隊哲學 (4 張卡片) -->
-      <section class="py-20 bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Our team</h2>
+      <!-- STREAMING_CHUNK: Rendering the Premium "Our Team" Cards Section -->
+      <!-- 💎 第二欄: 團隊哲學 (4 張奢華科技微光卡片) -->
+      <section class="py-24 bg-[#1a1815] border-t border-b border-[#9f892f]/10">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div class="text-center max-w-2xl mx-auto mb-20">
+            <span class="text-xs tracking-[0.3em] text-[#9f892f] font-semibold uppercase block mb-3"
+              >CREATIVE LEADERS</span
+            >
+            <h2 class="text-3xl sm:text-4xl font-light tracking-widest text-white">Our Team Philosophy</h2>
+          </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- 卡片 1: 創新 -->
-            <div class="feature-card">
-              <div class="text-teal-600 mb-4">
-                <!-- 閃電圖標 -->
-                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
+            <div
+              class="group bg-[#12110e]/40 border border-white/[0.03] hover:border-[#9f892f]/30 p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#9f892f]/5 flex flex-col justify-between"
+            >
+              <div>
+                <!-- Icon Container: 閃電 (霧金極細線 SVG) -->
+                <div class="text-[#9f892f] mb-6 transform group-hover:scale-105 transition-transform duration-300">
+                  <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+                    />
+                  </svg>
+                </div>
+                <h4
+                  class="text-lg font-medium text-white tracking-wider mb-3 transition-colors group-hover:text-[#9f892f]"
+                >
+                  Continuous Innovation
+                </h4>
+                <p class="text-gray-400 text-xs sm:text-sm leading-relaxed font-light">
+                  We constantly learn the latest technologies and global trends to ensure our clients receive the most
+                  cutting-edge, fashionable scalp and styling solutions.
+                </p>
               </div>
-              <h4 class="text-xl font-bold text-gray-800 mb-2">Continuous Innovation</h4>
-              <p class="text-gray-500 text-base">
-                We constantly learn the latest technologies and trends to ensure our clients receive the most
-                cutting-edge and fashionable styling solutions.
-              </p>
             </div>
 
             <!-- 卡片 2: 專業 -->
-            <div class="feature-card">
-              <div class="text-teal-600 mb-4">
-                <!-- 皇冠圖標 -->
-                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4M7.864 4.254A1 1 0 018.66 3h6.68a1 1 0 01.795 1.254l-.443 1.554A12.015 12.015 0 0012 6a12.015 12.015 0 00-3.612-.444l-.444-1.554zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+            <div
+              class="group bg-[#12110e]/40 border border-white/[0.03] hover:border-[#9f892f]/30 p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#9f892f]/5 flex flex-col justify-between"
+            >
+              <div>
+                <!-- Icon Container: 皇冠 (霧金極細線 SVG) -->
+                <div class="text-[#9f892f] mb-6 transform group-hover:scale-105 transition-transform duration-300">
+                  <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                    />
+                  </svg>
+                </div>
+                <h4
+                  class="text-lg font-medium text-white tracking-wider mb-3 transition-colors group-hover:text-[#9f892f]"
+                >
+                  Top Professionalism
+                </h4>
+                <p class="text-gray-400 text-xs sm:text-sm leading-relaxed font-light">
+                  Every stylist undergoes rigorous, ongoing training and premium brand certification to serve you to the
+                  absolute highest aesthetic standards.
+                </p>
               </div>
-              <h4 class="text-xl font-bold text-gray-800 mb-2">Top Professionalism</h4>
-              <p class="text-gray-500 text-base">
-                Every stylist undergoes rigorous training and certification to serve you to the highest standards.
-              </p>
             </div>
 
             <!-- 卡片 3: 客製化 -->
-            <div class="feature-card">
-              <div class="text-teal-600 mb-4">
-                <!-- 量身定製圖標 -->
-                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.143M21 21v-7a3 3 0 00-3-3h-2"
-                  />
-                </svg>
+            <div
+              class="group bg-[#12110e]/40 border border-white/[0.03] hover:border-[#9f892f]/30 p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#9f892f]/5 flex flex-col justify-between"
+            >
+              <div>
+                <!-- Icon Container: 量身定製雙人 (霧金極細線 SVG) -->
+                <div class="text-[#9f892f] mb-6 transform group-hover:scale-105 transition-transform duration-300">
+                  <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.109A11.386 11.386 0 0110.089 21c-2.243 0-4.32-.647-6.079-1.763v-.109a4.125 4.125 0 017.532-2.492c.5.91.787 1.957.787 3.07h.003h1.5zm1.5-12.75a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0zm3 1.5a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zM12 11.25a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
+                    />
+                  </svg>
+                </div>
+                <h4
+                  class="text-lg font-medium text-white tracking-wider mb-3 transition-colors group-hover:text-[#9f892f]"
+                >
+                  Personalized Design
+                </h4>
+                <p class="text-gray-400 text-xs sm:text-sm leading-relaxed font-light">
+                  We deeply study your unique bone structure, hair quality, and daily routine to construct completely
+                  bespoke, highly adaptive hairstyles.
+                </p>
               </div>
-              <h4 class="text-xl font-bold text-gray-800 mb-2">Personalized Design</h4>
-              <p class="text-gray-500 text-base">
-                We deeply understand your needs and lifestyle to provide completely personalized hair designs.
-              </p>
             </div>
 
             <!-- 卡片 4: 永續 -->
-            <div class="feature-card">
-              <div class="text-teal-600 mb-4">
-                <!-- 葉子圖標 -->
-                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                  />
-                </svg>
+            <div
+              class="group bg-[#12110e]/40 border border-white/[0.03] hover:border-[#9f892f]/30 p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#9f892f]/5 flex flex-col justify-between"
+            >
+              <div>
+                <!-- Icon Container: 葉子 (霧金極細線 SVG) -->
+                <div class="text-[#9f892f] mb-6 transform group-hover:scale-105 transition-transform duration-300">
+                  <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3v18m0-18h-.01M12 3c-4.418 0-8 3.582-8 8a8 8 0 008 8m0-16c4.418 0 8 3.582 8 8a8 8 0 01-8 8"
+                    />
+                  </svg>
+                </div>
+                <h4
+                  class="text-lg font-medium text-white tracking-wider mb-3 transition-colors group-hover:text-[#9f892f]"
+                >
+                  Sustainability
+                </h4>
+                <p class="text-gray-400 text-xs sm:text-sm leading-relaxed font-light">
+                  We strictly integrate eco-certified, cruelty-free botanicals, taking concrete responsibility for your
+                  scalp health and our planet's future.
+                </p>
               </div>
-              <h4 class="text-xl font-bold text-gray-800 mb-2">Sustainability</h4>
-              <p class="text-gray-500 text-base">
-                We are committed to using environmentally friendly products and fulfilling our environmental commitments
-                in salon operations.
-              </p>
             </div>
           </div>
         </div>

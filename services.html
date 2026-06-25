@@ -98,92 +98,115 @@
 
     <main>
       <!-- 頂部標題區域 -->
-      <section class="bg-teal-600 pt-16 pb-12">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 class="text-5xl font-extrabold text-white mb-4">Our services</h1>
-          <p class="text-xl text-teal-200">
-            We offer transparent pricing and the highest quality professional hair services.
+      <!-- 💎 產品視覺橫幅: 升級為高階曜石金微光背景 -->
+      <section class="bg-[#12110e] py-20 md:py-28 relative overflow-hidden border-b border-[#9f892f]/10">
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-[#1c1815]/40 via-transparent to-[#12110e] pointer-events-none"
+        ></div>
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10 space-y-4">
+          <span class="text-xs tracking-[0.4em] text-[#9f892f] font-semibold uppercase block mb-1">PREMIUM MENU</span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-light tracking-[0.15em] text-white leading-tight">
+            Our Services
+          </h1>
+          <p
+            class="text-gray-400 text-sm sm:text-base tracking-widest max-w-2xl mx-auto font-light leading-relaxed pt-2"
+          >
+            We offer transparent pricing, customized aesthetics and the highest quality professional hair services.
           </p>
         </div>
       </section>
 
-      <!-- 服務項目詳細區塊 (三欄卡片設計) -->
-      <section class="py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="space-y-16">
-            <!-- 服務卡片 1: 剪髮服務 -->
+      <!-- 💎 服務項目詳細區塊 (三欄卡片設計) -->
+      <!-- STREAMING_CHUNK: Rendering the detailed pricing cards and tables -->
+      <section class="py-24 bg-[#faf8f5]">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div class="space-y-24">
+            <!-- 💎 服務卡片 1: 剪髮服務 Haircut -->
             <div
-              class="bg-white rounded-2xl shadow-xl overflow-hidden md:flex transform hover:shadow-2xl transition duration-300 group"
+              class="bg-white rounded-3xl border border-[#9f892f]/15 shadow-xl overflow-hidden lg:flex transition-all duration-500 hover:shadow-2xl hover:border-[#9f892f]/35 group"
             >
-              <!-- 左側圖片 -->
-              <div class="md:w-1/3 bg-gray-100 overflow-hidden">
+              <!-- 左側圖片：帶有緩速放大縮放動效 -->
+              <div class="lg:w-1/3 bg-[#12110e] overflow-hidden relative lg:min-h-auto">
                 <img
                   src="./images/haircut.jpg"
-                  alt="[一位專業美髮師正在為顧客剪髮的特寫]"
-                  class="w-full h-64 md:h-full object-cover group-hover:scale-105 transition duration-500"
+                  alt="Professional Haircut Session"
+                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-95"
+                  onerror="
+                    this.src =
+                      'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80'
+                  "
                 />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent lg:hidden"
+                ></div>
               </div>
 
-              <!-- 右側內容與價格表 -->
-              <div class="md:w-2/3 p-6 sm:p-10 lg:p-12">
-                <h2 class="text-3xl font-bold text-teal-700 mb-2">Haircut</h2>
-                <p class="text-gray-600 mb-6 border-b pb-4 border-teal-100">
-                  From classic to avant-garde, we'll create the perfect hairstyle for you.
-                </p>
+              <!-- 右側內容與極簡精品價格表 -->
+              <div class="lg:w-2/3 p-8 sm:p-12 lg:p-14 space-y-6">
+                <div>
+                  <span class="text-xs tracking-[0.3em] text-[#9f892f] font-semibold uppercase block mb-2"
+                    >PRECISION DESIGN</span
+                  >
+                  <h2 class="text-2xl sm:text-3xl font-light text-[#1c1a17] tracking-wider mb-2">Haircut</h2>
+                  <p class="text-gray-500 text-sm sm:text-base font-light leading-relaxed">
+                    From classic to avant-garde, we will craft the perfect, customized hairstyle matching your
+                    individuality.
+                  </p>
+                </div>
 
-                <div class="overflow-x-auto">
-                  <table class="w-full text-left price-table rounded-lg overflow-hidden">
+                <!-- 精品價目表 (Chic Minimalist Price List) -->
+                <div class="overflow-hidden border-t border-[#9f892f]/20 pt-4">
+                  <table class="w-full text-left font-light text-xs sm:text-sm tracking-wider">
                     <thead>
-                      <tr>
-                        <th class="rounded-tl-lg text-teal-600 bg-teal-100">Item</th>
-                        <th class="rounded-tr-lg text-right text-teal-600 bg-teal-100">Price</th>
+                      <tr class="text-[#9f892f] font-semibold uppercase text-xs">
+                        <th class="pb-3 w-3/4">Item</th>
+                        <th class="pb-3 text-right">Price</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>AI HAIR SPA SHAMPOO(Herb)</td>
-                        <td class="text-right">$45</td>
+                    <tbody class="text-gray-700 divide-y divide-gray-100/60">
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-3 font-normal text-[#1c1a17]">AI HAIR SPA SHAMPOO (Herb)</td>
+                        <td class="py-3 text-right font-medium text-[#9f892f]">$45</td>
                       </tr>
-                      <tr>
-                        <td>Men STANDARD CUT</td>
-                        <td class="text-right">$18</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-3">Men STANDARD CUT</td>
+                        <td class="py-3 text-right font-medium text-[#9f892f]">$18</td>
                       </tr>
-                      <tr>
-                        <td>BOY STANDARD CUT</td>
-                        <td class="text-right">$18</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-3">BOY STANDARD CUT</td>
+                        <td class="py-3 text-right font-medium text-[#9f892f]">$18</td>
                       </tr>
-                      <tr>
-                        <td>Men STYLING</td>
-                        <td class="text-right">$25</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-3">Men STYLING</td>
+                        <td class="py-3 text-right font-medium text-[#9f892f]">$25</td>
                       </tr>
-                      <tr>
-                        <td>BOY STYLING</td>
-                        <td class="text-right">$25</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-3">BOY STYLING</td>
+                        <td class="py-3 text-right font-medium text-[#9f892f]">$25</td>
                       </tr>
-                      <tr>
-                        <td>Beard trim(All over with number guard)</td>
-                        <td class="text-right">$10</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-3">Beard trim (All over with number guard)</td>
+                        <td class="py-3 text-right font-medium text-[#9f892f]">$10</td>
                       </tr>
-                      <tr>
-                        <td>Line(no pattern)</td>
-                        <td class="text-right">$10</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-3">Line (no pattern)</td>
+                        <td class="py-3 text-right font-medium text-[#9f892f]">$10</td>
                       </tr>
-                      <tr>
-                        <td>LADY STANDARD CUT</td>
-                        <td class="text-right">$20</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-3">LADY STANDARD CUT</td>
+                        <td class="py-3 text-right font-medium text-[#9f892f]">$20</td>
                       </tr>
-                      <tr>
-                        <td>GIRL STANDARD CUT</td>
-                        <td class="text-right">$20</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-3">GIRL STANDARD CUT</td>
+                        <td class="py-3 text-right font-medium text-[#9f892f]">$20</td>
                       </tr>
-
-                      <tr>
-                        <td>LADY STYLING</td>
-                        <td class="text-right">$25</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-3">LADY STYLING</td>
+                        <td class="py-3 text-right font-medium text-[#9f892f]">$25</td>
                       </tr>
-                      <tr>
-                        <td>GIRL STYLING</td>
-                        <td class="text-right">$25</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-3">GIRL STYLING</td>
+                        <td class="py-3 text-right font-medium text-[#9f892f]">$25</td>
                       </tr>
                     </tbody>
                   </table>
@@ -191,47 +214,54 @@
               </div>
             </div>
 
-            <!-- 服務卡片 2: 染髮服務 -->
+            <!-- STREAMING_CHUNK: Rendering the Colouring card and its table -->
+            <!-- 💎 服務卡片 2: 染髮服務 Colouring (左右對調增加呼吸感) -->
             <div
-              class="bg-white rounded-2xl shadow-xl overflow-hidden md:flex transform hover:shadow-2xl transition duration-300 group"
+              class="bg-white rounded-3xl border border-[#9f892f]/15 shadow-xl overflow-hidden lg:flex transition-all duration-500 hover:shadow-2xl hover:border-[#9f892f]/35 group"
             >
-              <!-- 左側內容與價格表 (順序對調以增加視覺變化) -->
-              <div class="md:w-2/3 p-6 sm:p-10 lg:p-12 order-2 md:order-1">
-                <h2 class="text-3xl font-bold text-rose-700 mb-2">Colouring</h2>
-                <p class="text-gray-600 mb-6 border-b pb-4 border-rose-100">
-                  Using top-quality imported dyes, the color is saturated and long-lasting, while minimizing damage to
-                  hair. Prices vary depending on length.
-                </p>
+              <!-- 左側內容與價格表 (大於 lg 螢幕時在右邊顯示，維持 layout 交互) -->
+              <div class="lg:w-2/3 p-8 sm:p-12 lg:p-14 space-y-6 order-2 lg:order-1">
+                <div>
+                  <span class="text-xs tracking-[0.3em] text-[#9f892f] font-semibold uppercase block mb-2"
+                    >SATURATED ARTISTRY</span
+                  >
+                  <h2 class="text-2xl sm:text-3xl font-light text-[#1c1a17] tracking-wider mb-2">Colouring</h2>
+                  <p class="text-gray-500 text-sm sm:text-base font-light leading-relaxed">
+                    Using top-tier imported professional botanical dyes, the color is deeply saturated and long-lasting
+                    while actively minimizing damage to your hair structure.
+                  </p>
+                </div>
 
-                <div class="overflow-x-auto">
-                  <table class="w-full text-left price-table rounded-lg overflow-hidden">
+                <!-- 染髮價目表 -->
+                <div class="overflow-hidden border-t border-[#9f892f]/20 pt-4">
+                  <table class="w-full text-left font-light text-xs sm:text-sm tracking-wider">
                     <thead>
-                      <tr>
-                        <th class="rounded-tl-lg bg-rose-100 text-rose-800">Item</th>
-                        <th class="bg-rose-100 text-rose-800">Length</th>
-                        <th class="rounded-tr-lg bg-rose-100 text-rose-800 text-right">Price</th>
+                      <tr class="text-[#9f892f] font-semibold uppercase text-xs">
+                        <th class="pb-3 w-1/2">Item</th>
+                        <th class="pb-3 w-1/4">Length</th>
+                        <th class="pb-3 text-right">Price</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>Short hair</td>
-                        <td>Above ear</td>
-                        <td class="text-right">$70</td>
+                    <tbody class="text-gray-700 divide-y divide-gray-100/60">
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-4 font-normal text-[#1c1a17]">Short hair</td>
+                        <td class="py-4 text-gray-400">Above ear</td>
+                        <td class="py-4 text-right font-medium text-[#9f892f]">$70</td>
                       </tr>
-                      <tr>
-                        <td>Medium-length</td>
-                        <td>shoulder-length</td>
-                        <td class="text-right">$90</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-4 font-normal text-[#1c1a17]">Medium-length</td>
+                        <td class="py-4 text-gray-400">Shoulder-length</td>
+                        <td class="py-4 text-right font-medium text-[#9f892f]">$90</td>
                       </tr>
-                      <tr>
-                        <td>Long hair</td>
-                        <td>Over shoulder</td>
-                        <td class="text-right">$110</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-4 font-normal text-[#1c1a17]">Long hair</td>
+                        <td class="py-4 text-gray-400">Over shoulder</td>
+                        <td class="py-4 text-right font-medium text-[#9f892f]">$110</td>
                       </tr>
-                      <tr>
-                        <td>Extra Long</td>
-                        <td></td>
-                        <td class="text-right">Extra from $30</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-4 font-normal text-[#1c1a17]">Extra Long</td>
+                        <td class="py-4 text-gray-400">-</td>
+                        <td class="py-4 text-right font-medium text-[#9f892f]">Extra from $30</td>
                       </tr>
                     </tbody>
                   </table>
@@ -239,67 +269,86 @@
               </div>
 
               <!-- 右側圖片 -->
-              <div class="md:w-1/3 bg-gray-100 overflow-hidden order-1 md:order-2">
+              <div class="lg:w-1/3 bg-[#12110e] overflow-hidden relative lg:min-h-auto order-1 lg:order-2">
                 <img
                   src="./images/color.jpg"
-                  alt=""
-                  class="w-full h-64 md:h-full object-cover group-hover:scale-105 transition duration-500"
-                  onerror="this.src = 'https://placehold.co/800x600/BE123C/FDE6F0?text=Hair+Dye'"
+                  alt="Luxury Hair Colouring Session"
+                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-95"
+                  onerror="
+                    this.src =
+                      'https://images.unsplash.com/photo-1522337360788-8b13edd793be?auto=format&fit=crop&w=800&q=80'
+                  "
                 />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent lg:hidden"
+                ></div>
               </div>
             </div>
 
-            <!-- 服務卡片 3: 護理服務 -->
+            <!-- STREAMING_CHUNK: Rendering the Treatment card and its table -->
+            <!-- 💎 服務卡片 3: 護理服務 Treatment -->
             <div
-              class="bg-white rounded-2xl shadow-xl overflow-hidden md:flex transform hover:shadow-2xl transition duration-300 group"
+              class="bg-white rounded-3xl border border-[#9f892f]/15 shadow-xl overflow-hidden lg:flex transition-all duration-500 hover:shadow-2xl hover:border-[#9f892f]/35 group"
             >
               <!-- 左側圖片 -->
-              <div class="md:w-1/3 bg-gray-100 overflow-hidden">
+              <div class="lg:w-1/3 bg-[#12110e] overflow-hidden relative lg:min-h-auto">
                 <img
                   src="./images/treatment.jpg"
-                  alt=""
-                  class="w-full h-64 md:h-full object-cover group-hover:scale-105 transition duration-500"
-                  onerror="this.src = 'https://placehold.co/800x600/059669/D1FAE5?text=Treatment'"
+                  alt="Scalp Hair Care Treatment"
+                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-95"
+                  onerror="
+                    this.src =
+                      'https://images.unsplash.com/photo-1522337360788-8b13edd793be?auto=format&fit=crop&w=800&q=80'
+                  "
                 />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent lg:hidden"
+                ></div>
               </div>
 
               <!-- 右側內容與價格表 -->
-              <div class="md:w-2/3 p-6 sm:p-10 lg:p-12">
-                <h2 class="text-3xl font-bold text-green-700 mb-2">Treatment</h2>
-                <p class="text-gray-600 mb-6 border-b pb-4 border-green-100">
-                  Focusing on deep repair of the scalp and hair, it restores your hair's healthy shine and strength from
-                  the inside out.
-                </p>
+              <div class="lg:w-2/3 p-8 sm:p-12 lg:p-14 space-y-6">
+                <div>
+                  <span class="text-xs tracking-[0.3em] text-[#9f892f] font-semibold uppercase block mb-2"
+                    >RESTORATIVE SCIENCE</span
+                  >
+                  <h2 class="text-2xl sm:text-3xl font-light text-[#1c1a17] tracking-wider mb-2">Treatment</h2>
+                  <p class="text-gray-500 text-sm sm:text-base font-light leading-relaxed">
+                    Focusing on deep molecular repair of the hair cuticle and the root scalp layer, restoring your
+                    hair's healthy shine and elasticity from the inside out.
+                  </p>
+                </div>
 
-                <div class="overflow-x-auto">
-                  <table class="w-full text-left price-table rounded-lg overflow-hidden">
+                <!-- 護理價目表 -->
+                <div class="overflow-hidden border-t border-[#9f892f]/20 pt-4">
+                  <table class="w-full text-left font-light text-xs sm:text-sm tracking-wider">
                     <thead>
-                      <tr>
-                        <th class="rounded-tl-lg bg-green-100 text-green-800">Item</th>
-                        <th class="rounded-tl-lg bg-green-100 text-green-800">Benefits</th>
-                        <th class="rounded-tr-lg bg-green-100 text-green-800 text-right">Price</th>
+                      <tr class="text-[#9f892f] font-semibold uppercase text-xs">
+                        <th class="pb-3 w-1/2">Item</th>
+                        <th class="pb-3 w-1/4">Benefits</th>
+                        <th class="pb-3 text-right">Price</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>MILBON HAIR TREATMENT</td>
-                        <td></td>
-                        <td class="text-right">$120</td>
+                    <tbody class="text-gray-700 divide-y divide-gray-100/60">
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-4 font-normal text-[#1c1a17]">MILBON HAIR TREATMENT</td>
+                        <td class="py-4 text-gray-400">Deep Repair</td>
+                        <td class="py-4 text-right font-medium text-[#9f892f]">$120</td>
                       </tr>
-                      <tr>
-                        <td>SCALP TREATMENT</td>
-                        <td>ANTI-HAIR LOSS</td>
-                        <td class="text-right">$120</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-4 font-normal text-[#1c1a17]">SCALP TREATMENT</td>
+                        <td class="py-4 text-[#9f892f] font-medium">ANTI-HAIR LOSS</td>
+                        <td class="py-4 text-right font-medium text-[#9f892f]">$120</td>
                       </tr>
-                      <tr>
-                        <td></td>
-                        <td>MOISTURIZING</td>
-                        <td class="text-right">$120</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-4 font-normal text-[#1c1a17]">SCALP TREATMENT</td>
+                        <td class="py-4 text-[#9f892f] font-medium">MOISTURIZING</td>
+                        <td class="py-4 text-right font-medium text-[#9f892f]">$120</td>
                       </tr>
-                      <tr>
-                        <td></td>
-                        <td>ANTI-DANDRUFF</td>
-                        <td class="text-right">$120</td>
+                      <tr class="hover:bg-[#faf8f5]/80 transition-colors duration-200">
+                        <td class="py-4 font-normal text-[#1c1a17]">SCALP TREATMENT</td>
+                        <td class="py-4 text-[#9f892f] font-medium">ANTI-DANDRUFF</td>
+                        <td class="py-4 text-right font-medium text-[#9f892f]">$120</td>
                       </tr>
                     </tbody>
                   </table>
@@ -308,19 +357,35 @@
             </div>
           </div>
 
-          <!-- 底部備註與行動呼籲 -->
-          <div class="mt-16 text-center bg-teal-50 p-8 rounded-xl border-2 border-teal-200">
-            <p class="text-xl font-bold text-teal-800 mb-3">Transparent pricing (no additional fees).</p>
-            <p class="text-gray-600 mb-6">
-              The above are individual service fees. Please contact our customer service for details on bundled service
-              offers.
-            </p>
-            <a
-              href="./contact.html"
-              class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-full text-white bg-teal-600 hover:bg-teal-700 transition duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
-            >
-              Please contact us for more information. &rarr;
-            </a>
+          <!-- STREAMING_CHUNK: Rendering the bottom call to action card -->
+          <!-- 💎 底部備註與行動呼籲：升級為曜石極黑金霧面微光卡片 -->
+          <div
+            class="mt-24 p-8 sm:p-12 md:p-16 rounded-3xl bg-[#12110e] text-center border border-[#9f892f]/20 relative overflow-hidden shadow-2xl"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-[#1c1815]/50 via-transparent to-[#12110e] pointer-events-none"
+            ></div>
+
+            <div class="relative z-10 max-w-2xl mx-auto space-y-6">
+              <span class="text-xs tracking-[0.4em] text-[#9f892f] font-semibold uppercase block">PRICING POLICY</span>
+              <h3 class="text-xl sm:text-2xl lg:text-3xl font-light text-white tracking-widest leading-snug">
+                Transparent pricing (no hidden fees).
+              </h3>
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed font-light">
+                The values listed above represent individual service fees. Please feel free to contact our customer
+                relations team for exclusive custom bundles and bespoke multi-care offers.
+              </p>
+
+              <!-- 金色實心奢華按鈕 -->
+              <div class="pt-4">
+                <a
+                  href="./contact.html"
+                  class="inline-flex items-center justify-center px-8 py-3.5 border border-[#9f892f] text-xs tracking-[0.2em] font-medium uppercase rounded-none text-white bg-[#9f892f] hover:bg-[#bfa64e] hover:border-[#bfa64e] transition-all duration-300 shadow-lg hover:shadow-[#9f892f]/20"
+                >
+                  Please contact us for more information &rarr;
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
